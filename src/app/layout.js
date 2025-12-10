@@ -18,7 +18,7 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata = {
-  title: "Lenscape | Premium Photography Portfolio",
+  title: "Khayer's | Lenscape",
   description: "Capturing souls and moments. professional photography portfolio.",
 };
 

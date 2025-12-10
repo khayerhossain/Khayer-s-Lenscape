@@ -52,7 +52,7 @@ const ContactForm = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <h3 className="text-xl font-medium text-white mb-10 tracking-wide">Write a Review</h3>
+                                <h3 className="text-xl font-medium text-white mb-10 tracking-wide">Write a <span className="text-red-500">Review</span></h3>
 
                                 <form className="space-y-6">
                                     <div className="group relative">
@@ -88,7 +88,7 @@ const ContactForm = () => {
                                     <motion.button
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
-                                        className="w-full py-4 bg-white text-black font-bold uppercase tracking-widest text-sm rounded-xl hover:bg-gray-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                                        className="w-full py-4 bg-white text-black font-bold uppercase tracking-widest text-sm rounded-xl hover:bg-gray-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)] cursor-pointer"
                                     >
                                         Send Message
                                     </motion.button>
