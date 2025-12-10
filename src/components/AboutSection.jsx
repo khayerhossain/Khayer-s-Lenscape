@@ -49,24 +49,24 @@ const AboutSection = () => {
                     transition={{ duration: 0.8 }}
                     className="w-full md:w-1/2"
                 >
-                    <span className="text-[var(--color-accent)] font-bold tracking-[0.2em] uppercase text-sm mb-4 block">About Me</span>
+                    <span className="text-red-500 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">About Me</span>
                     <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-                        Chasing Light <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">Since 2023</span>
+                        Chasing <span className="text-red-500">Light</span> <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">span 2023</span>
                     </h2>
 
                     <GlassCard className="p-8 border-l-4 border-l-[var(--color-accent)]">
                         <p className="text-[var(--color-dim)] text-lg leading-relaxed mb-6">
-                            I’m not a professional photographer — just someone who became curious about capturing moments and slowly fell in love with it. Since 2023, I’ve been exploring photography and cinematography in my own way, learning step by step and trying to improve whenever I can.
+                            I’m not a professional photographer just someone who became curious about capturing moments and slowly fell in love with it. Since 2023, I’ve been exploring photography and cinematography in my own way, learning step by step and trying to improve whenever I can.
 
-                            I enjoy saving small memories, light, colors, and simple moments that feel special to me.
+                            <span className="text-red-500"> I enjoy saving small memories, light, colors, and simple moments that feel special to me.</span>
                         </p>
                         <p className="text-[var(--color-dim)] text-lg leading-relaxed">
                             My work is a blend of cinematic documentary and fine art, aiming not just to show you a scene, but to make you feel the atmosphere of that precise second in time.
                         </p>
                     </GlassCard>
 
-                    <div className="mt-12 flex gap-12">
+                    {/* <div className="mt-12 flex gap-12">
                         <div>
                             <h3 className="text-3xl font-bold text-white">50+</h3>
                             <p className="text-[var(--color-dim)] text-sm uppercase tracking-wider mt-1">Countries</p>
@@ -79,7 +79,7 @@ const AboutSection = () => {
                             <h3 className="text-3xl font-bold text-white">12</h3>
                             <p className="text-[var(--color-dim)] text-sm uppercase tracking-wider mt-1">Awards</p>
                         </div>
-                    </div>
+                    </div> */}
                 </motion.div>
             </Container>
         </section>

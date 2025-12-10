@@ -18,10 +18,10 @@ const VideoSection = () => {
             <Container>
                 <div className="flex flex-col md:flex-row items-end justify-between mb-12">
                     <div>
-                        <h2 className="text-5xl font-bold text-white mb-4">Films</h2>
+                        <h2 className="text-5xl font-bold text-white mb-4">Cinematic <span className="text-red-500">Films</span></h2>
                         <p className="text-[var(--color-dim)] text-lg max-w-md">Motion and emotion captured in frames per second.</p>
                     </div>
-                    <button className="text-[var(--color-accent)] uppercase tracking-widest text-sm hover:text-white transition-colors mt-6 md:mt-0">
+                    <button className="text-red-500 uppercase tracking-widest text-sm hover:text-white transition-colors mt-6 md:mt-0">
                         View All Projects
                     </button>
                 </div>

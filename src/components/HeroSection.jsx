@@ -40,10 +40,10 @@ const HeroSection = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <p className="text-white/80 text-sm md:text-base tracking-wider mb-2 font-medium">Where Every Frame Holds a Memory</p>
+                        <p className="text-white/80 text-sm md:text-base tracking-wider mb-2 font-medium">Where Every Frame Holds a <span className="text-red-500">Memory</span></p>
                         <h1 className="text-5xl md:text-7xl font-bold text-white leading-[0.95] mb-6 uppercase">
                             Through <br />
-                            Khayer’s Lens
+                            Khayer’s <span className="text-red-500">Lens</span>
                         </h1>
                         <i className="text-white/70 text-sm md:text-base max-w-xl leading-relaxed mb-8">
                             I will one day frame the world with my photography and cinematic videos, turning simple moments into memories.</i>

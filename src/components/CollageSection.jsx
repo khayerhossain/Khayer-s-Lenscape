@@ -53,7 +53,7 @@ const CollageSection = () => {
             <Container>
                 <div className="flex flex-col md:flex-row items-end justify-between mb-16">
                     <div>
-                        <span className="text-[var(--color-accent)] font-bold tracking-[0.2em] uppercase text-sm">Portfolio</span>
+                        <span className="text-red-500 font-bold tracking-[0.2em] uppercase text-sm">Portfolio</span>
                         <h2 className="text-5xl font-bold text-white mt-2">Selected Works</h2>
                     </div>
                     <div className="flex gap-4 mt-6 md:mt-0 text-[var(--color-dim)] text-sm uppercase tracking-wider font-semibold">
@@ -98,12 +98,12 @@ const CollageSection = () => {
                         onClick={handleToggleView}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="group relative px-12 py-4 bg-transparent overflow-hidden rounded-full border border-[var(--color-accent)] text-white font-bold uppercase tracking-widest text-xs transition-all hover:shadow-[0_0_20px_rgba(230,81,0,0.4)]"
+                        className="group relative px-6 py-4 bg-transparent overflow-hidden rounded-lg border border-red-500 text-white font-bold uppercase tracking-widest text-xs transition-all hover:shadow-red-500 cursor-pointer"
                     >
                         <span className="relative z-10 group-hover:text-black transition-colors duration-300 flex items-center gap-2">
                             {isAllVisible ? "- Show Less" : "+ Load More Photos"}
                         </span>
-                        <div className="absolute inset-0 bg-[var(--color-accent)] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
+                        <div className="absolute inset-0 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
                     </motion.button>
                 </div>
             </Container>

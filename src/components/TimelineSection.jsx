@@ -17,7 +17,7 @@ const TimelineSection = () => {
         <section className="py-24 relative">
             <Container className="max-w-5xl">
                 <div className="text-center mb-20">
-                    <span className="text-[var(--color-accent)] font-bold tracking-[0.2em] uppercase text-sm">Journal</span>
+                    <span className="text-red-500 font-bold tracking-[0.2em] uppercase text-sm">Journal</span>
                     <h2 className="text-5xl font-bold text-white mt-2">Recent Moments</h2>
                 </div>
 
@@ -35,7 +35,7 @@ const TimelineSection = () => {
                             className={`relative flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
                         >
                             {/* Center Dot */}
-                            <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-[var(--color-background)] border-2 border-[var(--color-accent)] rounded-full z-10 md:-translate-x-1/2 shadow-[0_0_15px_var(--color-accent)]" />
+                            <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-[var(--color-background)] border-2 border-red-500 rounded-full z-10 md:-translate-x-1/2 " />
 
                             {/* Content Card (Left/Right) */}
                             <div className="w-full md:w-1/2 pl-12 md:pl-0 md:px-12">
@@ -51,7 +51,7 @@ const TimelineSection = () => {
                                         </div>
                                         <div>
                                             <div className="flex items-center gap-3 mb-2">
-                                                <span className="text-xs font-mono text-[var(--color-accent)] py-1 px-2 rounded bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20">
+                                                <span className="text-xs font-mono text-red-500 py-1 px-2 rounded bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20">
                                                     {item.date}
                                                 </span>
                                             </div>
