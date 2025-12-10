@@ -36,7 +36,7 @@ const Footer = () => {
 
                     {/* Newsletter/Action Column */}
                     <div className="flex flex-col justify-center items-end text-right">
-                        <h3 className="text-white font-bold uppercase tracking-widest text-xs mb-8">Stay Updated</h3>
+                        <h3 className="text-white font-bold uppercase tracking-widest text-xs mb-8">Stay <span className="text-red-600">Updated</span></h3>
                         <p className="text-[var(--color-dim)] text-sm mb-6 max-w-md">
                             Join the journey. No spam, just stories and updates from the road.
                         </p>

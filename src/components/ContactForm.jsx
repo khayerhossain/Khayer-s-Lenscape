@@ -8,8 +8,8 @@ const ContactForm = () => {
     return (
         <section id="reviews" className="relative py-32 flex items-center justify-center min-h-screen overflow-hidden bg-[#0a0a0a]">
             {/* Ambient Background Glow - Red Touch */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[150px] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-red-900/5 rounded-full blur-[150px] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-black/50 rounded-full blur-[150px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-black/50 rounded-full blur-[150px] pointer-events-none" />
 
             <Container className="relative z-10 w-full max-w-6xl">
                 <div className="flex flex-col md:flex-row gap-20 items-stretch">
@@ -45,7 +45,7 @@ const ContactForm = () => {
 
                     {/* Right: Review Form - Transparent & Red */}
                     <div className="w-full md:w-1/2">
-                        <div className="h-full p-8 md:p-12 border border-white/20 bg-white/10 backdrop-blur-md rounded-3xl relative overflow-hidden">
+                        <div className="h-full p-8 md:p-12 border border-white/20 bg-black/50 backdrop-blur-md rounded-3xl relative overflow-hidden">
 
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ const ContactForm = () => {
                                     <div className="group relative">
                                         <input
                                             type="text"
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-lg text-white placeholder-transparent focus:outline-none focus:bg-white/10 focus:border-white/30 transition-all peer"
+                                            className="w-full bg-black border border-white/10 rounded-xl px-6 py-4 text-lg text-white placeholder-transparent focus:outline-none focus:bg-black focus:border-white/30 transition-all peer"
                                             placeholder="Your Name"
                                             id="name"
                                         />
@@ -73,7 +73,7 @@ const ContactForm = () => {
                                     <div className="group relative">
                                         <textarea
                                             rows="4"
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-lg text-white placeholder-transparent focus:outline-none focus:bg-white/10 focus:border-white/30 transition-all resize-none peer"
+                                            className="w-full bg-black border border-white/10 rounded-xl px-6 py-4 text-lg text-white placeholder-transparent focus:outline-none focus:bg-black focus:border-white/30 transition-all resize-none peer"
                                             placeholder="Your Message"
                                             id="message"
                                         />
