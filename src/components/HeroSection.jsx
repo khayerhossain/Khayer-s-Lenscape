@@ -6,10 +6,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Container from './ui/Container';
 
 const cards = [
-    { src: "https://i.ibb.co.com/VYrS792b/download-19.jpg", title: "Nature" },
-    { src: "https://i.ibb.co.com/JWbRd86f/download-17.jpg", title: "Desert" },
-    { src: "https://i.ibb.co.com/BKtxk40X/download-16.jpg", title: "Peaks" },
+    { src: "https://i.ibb.co.com/n8mY8bnt/IMG-0481.jpg", title: "Khayer" },
+    { src: "https://i.ibb.co.com/0jM30yfc/IMG-0512.jpg", title: "Khayer" },
+    { src: "https://i.ibb.co.com/Jj2TXrd1/IMG-0074.jpg", title: "Khayer" },
 ];
+
 
 const HeroSection = () => {
     const { scrollY } = useScroll();
@@ -25,7 +26,7 @@ const HeroSection = () => {
                     fill
                     className="object-cover"
                     priority
-                    quality={100}
+                    quality={80}
                 />
                 {/* Gradient Overlay for Text Readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
@@ -72,6 +73,8 @@ const HeroSection = () => {
                                     alt={card.title}
                                     fill
                                     className="object-cover"
+                                    priority
+                                    quality={75}
                                 />
                             </div>
                         ))}

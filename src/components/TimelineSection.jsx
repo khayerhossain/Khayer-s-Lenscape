@@ -5,12 +5,8 @@ import GlassCard from './ui/GlassCard';
 import Image from 'next/image';
 import Container from './ui/Container';
 
-const moments = [
-    { date: "Oct 12, 2024", location: "Kyoto, Japan", title: "Autumn Silence", description: "Wandering through the bamboo groves at dawn.", img: "https://i.ibb.co.com/KjmHHQjJ/download-21.jpg" },
-    { date: "Sep 08, 2024", location: "New York, USA", title: "Concrete Jungle", description: "The city that never sleeps, caught in a moment of pause.", img: "https://i.ibb.co.com/VYrS792b/download-19.jpg" },
-    { date: "Aug 21, 2024", location: "Reykjavik, Iceland", title: "Northern Lights", description: "Dancing colors in the freezing night sky.", img: "https://i.ibb.co.com/TM0nS59J/download-20.jpg" },
-    { date: "Jul 14, 2024", location: "Paris, France", title: "Seine Sunset", description: "Golden reflections on the water.", img: "https://i.ibb.co.com/JwpcQYyV/download-18.jpg" }
-];
+import moments from '../data/moments.json';
+
 
 const TimelineSection = () => {
     return (
@@ -25,7 +21,7 @@ const TimelineSection = () => {
                     {/* Vertical Line */}
                     <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-white/10 md:-translate-x-1/2" />
 
-                    {moments.map((item, index) => (
+                    {moments.slice(0, 6).map((item, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
@@ -47,6 +43,8 @@ const TimelineSection = () => {
                                                 alt={item.title}
                                                 fill
                                                 className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                                quality={60}
+                                                sizes="(max-width: 640px) 100vw, 96px"
                                             />
                                         </div>
                                         <div>

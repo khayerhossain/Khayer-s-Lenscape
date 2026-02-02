@@ -6,43 +6,29 @@ import Image from 'next/image';
 import GlassCard from './ui/GlassCard';
 import Container from './ui/Container';
 
-const allImages = [
-    // Initial batch (8 images)
-    { id: 1, src: "https://i.ibb.co.com/TM0nS59J/download-20.jpg", title: "Golden Hour", span: "md:col-span-2 md:row-span-2" },
-    { id: 2, src: "https://i.ibb.co.com/VYrS792b/download-19.jpg", title: "Street Vibes", span: "md:col-span-1 md:row-span-1" },
-    { id: 3, src: "https://i.ibb.co.com/JwpcQYyV/download-18.jpg", title: "Travel", span: "md:col-span-1 md:row-span-2" },
-    { id: 4, src: "https://i.ibb.co.com/JWbRd86f/download-17.jpg", title: "Moments", span: "md:col-span-1 md:row-span-1" },
-    { id: 5, src: "https://i.ibb.co.com/BKtxk40X/download-16.jpg", title: "Portraits", span: "md:col-span-1 md:row-span-1" },
-    { id: 6, src: "https://i.ibb.co.com/38xYVfV/download-15.jpg", title: "Urban", span: "md:col-span-1 md:row-span-1" },
-    { id: 7, src: "https://i.ibb.co.com/KjmHHQjJ/download-21.jpg", title: "Wild", span: "md:col-span-1 md:row-span-1" },
-    { id: 8, src: "https://i.ibb.co.com/s9YYBZjM/download-7.jpg", title: "Culture", span: "md:col-span-1 md:row-span-1" },
+import moments from '../data/moments.json';
 
-    // Batch 2 (4 images)
-    { id: 9, src: "https://i.ibb.co.com/VYrS792b/download-19.jpg", title: "City Lights", span: "md:col-span-2 md:row-span-1" },
-    { id: 10, src: "https://i.ibb.co.com/TM0nS59J/download-20.jpg", title: "Serenity", span: "md:col-span-1 md:row-span-2" },
-    { id: 11, src: "https://i.ibb.co.com/JWbRd86f/download-17.jpg", title: "Motion", span: "md:col-span-1 md:row-span-1" },
-    { id: 12, src: "https://i.ibb.co.com/BKtxk40X/download-16.jpg", title: "Faces", span: "md:col-span-2 md:row-span-2" },
+const allImages = moments.map(item => ({
+    id: item.id,
+    src: item.img,
+    title: item.title,
+    span: item.span || "md:col-span-1 md:row-span-1"
+}));
 
-    // Batch 3 (4 images)
-    { id: 13, src: "https://i.ibb.co.com/38xYVfV/download-15.jpg", title: "Life", span: "md:col-span-1 md:row-span-1" },
-    { id: 14, src: "https://i.ibb.co.com/KjmHHQjJ/download-21.jpg", title: "Nature", span: "md:col-span-1 md:row-span-1" },
-    { id: 15, src: "https://i.ibb.co.com/s9YYBZjM/download-7.jpg", title: "Abstract", span: "md:col-span-2 md:row-span-1" },
-    { id: 16, src: "https://i.ibb.co.com/JwpcQYyV/download-18.jpg", title: "Deep Blue", span: "md:col-span-2 md:row-span-1" },
-];
 
 const CollageSection = () => {
-    const [visibleCount, setVisibleCount] = useState(8);
+    const [visibleCount, setVisibleCount] = useState(12); // Show more initially since they are small
+    const [selectedImage, setSelectedImage] = useState(null);
 
     const handleToggleView = () => {
         if (visibleCount >= allImages.length) {
-            // Scroll to top of grid smoothly
             const gridElement = document.getElementById('collage-grid');
             if (gridElement) {
                 gridElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-            setTimeout(() => setVisibleCount(8), 300); // Delay slightly for scroll start
+            setTimeout(() => setVisibleCount(12), 300);
         } else {
-            setVisibleCount(prev => Math.min(prev + 4, allImages.length));
+            setVisibleCount(prev => Math.min(prev + 12, allImages.length));
         }
     };
 
@@ -64,7 +50,7 @@ const CollageSection = () => {
                     </div>
                 </div>
 
-                <div id="collage-grid" className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                <div id="collage-grid" className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 auto-rows-none">
                     <AnimatePresence>
                         {allImages.slice(0, visibleCount).map((img, i) => (
                             <motion.div
@@ -74,24 +60,66 @@ const CollageSection = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.4 }}
-                                className={`relative group ${img.span}`}
+                                className="relative aspect-square group overflow-hidden cursor-pointer"
+                                onClick={() => setSelectedImage(img)}
                             >
-                                <GlassCard className="p-0 h-full w-full overflow-hidden relative cursor-pointer hover:border-[var(--color-accent)]/50 transition-colors">
+                                <GlassCard className="p-0 h-full w-full overflow-hidden relative hover:border-[var(--color-accent)]/50 transition-colors">
                                     <Image
                                         src={img.src}
                                         alt={img.title}
                                         fill
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                                        sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 16vw"
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        quality={60}
                                     />
                                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                                        <span className="text-sm font-bold text-white tracking-widest uppercase border-y border-[var(--color-accent)]/50 py-2 px-4">{img.title}</span>
+                                        <span className="text-[10px] font-bold text-white tracking-widest uppercase border-y border-[var(--color-accent)]/50 py-1 px-2">{img.title}</span>
                                     </div>
                                 </GlassCard>
                             </motion.div>
                         ))}
                     </AnimatePresence>
                 </div>
+
+                {/* Lightbox / Large View */}
+                <AnimatePresence>
+                    {selectedImage && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setSelectedImage(null)}
+                            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md flex items-center justify-center p-4 md:p-12 cursor-zoom-out"
+                        >
+                            <motion.div
+                                initial={{ scale: 0.9, y: 20 }}
+                                animate={{ scale: 1, y: 0 }}
+                                exit={{ scale: 0.9, y: 20 }}
+                                className="relative max-w-5xl w-full h-[80vh] overflow-hidden rounded-2xl border border-white/10"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <Image
+                                    src={selectedImage.src}
+                                    alt={selectedImage.title}
+                                    fill
+                                    className="object-contain md:object-cover"
+                                    priority
+                                    quality={85}
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent">
+                                    <h3 className="text-3xl font-bold text-white">{selectedImage.title}</h3>
+                                    <p className="text-[var(--color-dim)] mt-2 uppercase tracking-[0.2em] font-bold text-sm">Captured Moment</p>
+                                </div>
+                                <button 
+                                    onClick={() => setSelectedImage(null)}
+                                    className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors cursor-pointer"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                </button>
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
 
                 <div className="flex justify-center mt-20">
                     <motion.button
@@ -110,5 +138,6 @@ const CollageSection = () => {
         </section>
     );
 };
+
 
 export default CollageSection;
