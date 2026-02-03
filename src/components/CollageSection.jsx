@@ -73,7 +73,7 @@ const CollageSection = () => {
                                         quality={60}
                                     />
                                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                                        <span className="text-[10px] font-bold text-white tracking-widest uppercase border-y border-[var(--color-accent)]/50 py-1 px-2">{img.title}</span>
+                                        <span className="text-[8px] sm:text-[10px] font-bold text-white tracking-widest uppercase border-y border-[var(--color-accent)]/50 py-1 px-2">{img.title}</span>
                                     </div>
                                 </GlassCard>
                             </motion.div>
@@ -95,24 +95,24 @@ const CollageSection = () => {
                                 initial={{ scale: 0.9, y: 20 }}
                                 animate={{ scale: 1, y: 0 }}
                                 exit={{ scale: 0.9, y: 20 }}
-                                className="relative max-w-5xl w-full h-[80vh] overflow-hidden rounded-2xl border border-white/10"
+                                className="relative max-w-5xl w-full h-[70vh] md:h-[80vh] overflow-hidden rounded-2xl border border-white/10"
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 <Image
                                     src={selectedImage.src}
                                     alt={selectedImage.title}
                                     fill
-                                    className="object-contain md:object-cover"
+                                    className="object-contain"
                                     priority
                                     quality={85}
                                 />
-                                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent">
-                                    <h3 className="text-3xl font-bold text-white">{selectedImage.title}</h3>
-                                    <p className="text-[var(--color-dim)] mt-2 uppercase tracking-[0.2em] font-bold text-sm">Captured Moment</p>
+                                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black to-transparent">
+                                    <h3 className="text-xl md:text-3xl font-bold text-white">{selectedImage.title}</h3>
+                                    <p className="text-[var(--color-dim)] mt-1 md:mt-2 uppercase tracking-[0.2em] font-bold text-[10px] md:text-sm">Captured Moment</p>
                                 </div>
                                 <button 
                                     onClick={() => setSelectedImage(null)}
-                                    className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors cursor-pointer"
+                                    className="absolute top-4 right-4 md:top-6 md:right-6 text-white/50 hover:text-white transition-colors cursor-pointer bg-black/20 backdrop-blur-md rounded-full p-2"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                                 </button>

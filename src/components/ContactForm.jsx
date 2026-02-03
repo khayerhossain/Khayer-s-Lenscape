@@ -25,7 +25,7 @@ const ContactForm = () => {
                             <span className="w-12 h-[1px] bg-red-500"></span>
                             Guestbook
                         </span>
-                        <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-[0.9]">
+                        <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-8 leading-[0.9]">
                             Leave Your <br />
                             <span className="text-red-600">Mark.</span>
                         </h2>

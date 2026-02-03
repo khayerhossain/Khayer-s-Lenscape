@@ -3,7 +3,7 @@
     "id": 1,
     "date": "Jan 10, 2024",
     "location": "Dhaka, Bangladesh",
-    "title": "Urban Exploration",
+    "title": "Village Sunset",
     "description": "Capturing the raw energy of the city streets.",
     "img": "https://i.ibb.co.com/pNJ02D6/IMG-0098.jpg",
     "span": "md:col-span-2 md:row-span-2"
@@ -12,7 +12,7 @@
     "id": 2,
     "date": "Jan 12, 2024",
     "location": "Sylhet, Bangladesh",
-    "title": "Serene Landscapes",
+    "title": "Mountain",
     "description": "The morning mist over the tea gardens.",
     "img": "https://i.ibb.co.com/cKHngz6h/IMG-0175.jpg",
     "span": "md:col-span-1 md:row-span-1"
@@ -21,7 +21,7 @@
     "id": 3,
     "date": "Jan 15, 2024",
     "location": "Chittagong, Bangladesh",
-    "title": "Coastal Vibes",
+    "title": "River and Boat",
     "description": "Sunsets by the Bay of Bengal.",
     "img": "https://i.ibb.co.com/DgP2TCBV/IMG-0187.jpg",
     "span": "md:col-span-1 md:row-span-2"
@@ -42,15 +42,6 @@
     "title": "Golden Sands",
     "description": "Infinite horizons on the world's longest beach.",
     "img": "https://i.ibb.co.com/7dsS2CDr/IMG-1093.jpg",
-    "span": "md:col-span-1 md:row-span-1"
-  },
-  {
-    "id": 6,
-    "date": "Jan 22, 2024",
-    "location": "Sreemangal, Bangladesh",
-    "title": "Green Canopy",
-    "description": "Lush greenery as far as the eye can see.",
-    "img": "https://i.ibb.co.com/679qNkq8/IMG-1094.jpg",
     "span": "md:col-span-1 md:row-span-1"
   },
   {
