@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="flex flex-col justify-between h-full">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">
-                Khayer's <span className="text-red-600">Lenscape</span>
+                Khayer&apos;s <span className="text-red-600">Lenscape</span>
               </h2>
               <p className="text-[var(--color-dim)] text-lg leading-relaxed max-w-md mb-8">
                 Wandering the world to capture the raw, the beautiful, and the
@@ -71,7 +71,9 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-[var(--color-dim)]">
-          <p>&copy; {currentYear} Khayer's Lenscape. All rights reserved.</p>
+          <p>
+            &copy; {currentYear} Khayer&apos;s Lenscape. All rights reserved.
+          </p>
           <div className="flex gap-8 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy

@@ -1,7 +1,7 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-
 import { Play } from "lucide-react";
 import Image from "next/image";
 import Container from "./ui/Container";
@@ -9,22 +9,27 @@ import Container from "./ui/Container";
 const videos = [
   {
     id: 1,
-    title: "Cinematic Reel",
-    thumbnail: "https://i.ibb.co.com/KjmHHQjJ/download-21.jpg",
+    title: "Urban Stories",
+    thumbnail: "https://i.ibb.co/VYrS792b/download-19.jpg",
+    videoId: "O6m-PI8_zqw",
   },
   {
     id: 2,
-    title: "Urban Stories",
-    thumbnail: "https://i.ibb.co.com/VYrS792b/download-19.jpg",
+    title: "Nature's Breath",
+    thumbnail: "https://i.ibb.co/TM0nS59J/download-20.jpg",
+    videoId: "O6m-PI8_zqw",
   },
   {
     id: 3,
-    title: "Nature's Breath",
-    thumbnail: "https://i.ibb.co.com/TM0nS59J/download-20.jpg",
+    title: "Visual Journey",
+    thumbnail: "https://img.youtube.com/vi/O6m-PI8_zqw/maxresdefault.jpg",
+    videoId: "O6m-PI8_zqw",
   },
 ];
 
 const VideoSection = () => {
+  const [activeVideo, setActiveVideo] = useState(null);
+
   return (
     <section className="py-24">
       <Container>
@@ -50,7 +55,11 @@ const VideoSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className="relative overflow-hidden rounded-[18px] p-0 group cursor-pointer h-[280px] transition-colors">
+              {/* Card without <a> to prevent redirect */}
+              <div
+                onClick={() => setActiveVideo(video.videoId)}
+                className="block relative overflow-hidden rounded-[18px] group cursor-pointer h-[260px] transition-all"
+              >
                 <div className="relative w-full h-full">
                   <Image
                     src={video.thumbnail}
@@ -77,6 +86,30 @@ const VideoSection = () => {
           ))}
         </div>
       </Container>
+
+      {/* Modal */}
+      {activeVideo && (
+        <div
+          className="fixed inset-0 z-[999] bg-black/90 flex items-center justify-center"
+          onClick={() => setActiveVideo(null)}
+        >
+          <motion.div
+            className="w-[90%] md:w-[70%] aspect-video"
+            onClick={(e) => e.stopPropagation()}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+          >
+            <iframe
+              className="w-full h-full rounded-xl"
+              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&rel=0&modestbranding=1`}
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              title="Video Player"
+            />
+          </motion.div>
+        </div>
+      )}
     </section>
   );
 };

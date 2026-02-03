@@ -10,7 +10,16 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+      },
     ],
+    qualities: [60, 75, 80],
   },
 };
 
