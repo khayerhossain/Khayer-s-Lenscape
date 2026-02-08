@@ -58,12 +58,13 @@ const exploreItems = [
     title: "STUDIO PORTRAITS",
     location: "Dhaka, Bangladesh",
     src: "https://i.ibb.co.com/xS8rSsGf/IMG-1621.jpg",
+    mobileFullWidth: true,
   },
 ];
 
 const ExploreSection = () => {
   return (
-    <section className="py-12 md:py-24 h-auto md:h-[90vh] min-h-[700px] flex flex-col justify-center overflow-hidden bg-[#030303] px-6 md:px-8 lg:px-10">
+    <section className="py-12 md:py-24 h-auto md:h-[90vh] min-h-[700px] flex flex-col justify-center overflow-hidden bg-[#030303] px-[2px] md:px-8 lg:px-10">
       <div className="w-full max-w-[1400px] mx-auto h-full flex flex-col">
         <div className="text-center mb-10">
           <motion.h2
@@ -83,7 +84,7 @@ const ExploreSection = () => {
           </motion.p>
         </div>
 
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-3 md:grid-rows-[repeat(3,1fr)] gap-4 h-full min-h-0">
+        <div className="flex-1 grid grid-cols-2 md:grid-cols-3 md:grid-rows-[repeat(3,1fr)] gap-[2px] md:gap-4 h-full min-h-0">
           {exploreItems.map((item, index) => (
             <motion.div
               key={item.id}
@@ -91,7 +92,9 @@ const ExploreSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="relative overflow-hidden rounded-xl border border-white/5 group bg-white/5 w-full h-full"
+              className={`relative overflow-hidden rounded-xl border border-white/5 group bg-white/5 w-full aspect-square md:aspect-auto md:h-full ${
+                item.mobileFullWidth ? "col-span-2 md:col-span-1" : ""
+              }`}
             >
               <Image
                 src={item.src}

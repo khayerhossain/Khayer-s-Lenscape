@@ -9,22 +9,28 @@ import Container from "./ui/Container";
 const videos = [
   {
     id: 1,
-    title: "Rivers",
+    title: "The Silent Flow",
+    description:
+      "A rhythmic journey through the winding river lifelines of Bangladesh.",
     thumbnail:
-      "https://i.ibb.co.com/RTwFJg5H/Screenshot-2026-02-08-at-8-10-13-PM.png", // Placeholder for Facebook video
-    videoId: "1527322588352043", // Facebook Video ID
+      "https://i.ibb.co.com/RTwFJg5H/Screenshot-2026-02-08-at-8-10-13-PM.png",
+    videoId: "1527322588352043",
     type: "facebook",
   },
   {
     id: 2,
-    title: "Sreemnagal",
+    title: "Green Serenity",
+    description:
+      "Exploring the lush tea gardens and mist-covered hills of Sreemangal.",
     thumbnail: "https://img.youtube.com/vi/XfTWMyT-DfQ/maxresdefault.jpg",
     videoId: "XfTWMyT-DfQ",
     type: "youtube",
   },
   {
     id: 3,
-    title: "Latargul Forest",
+    title: "Ratargul Echoes",
+    description:
+      "Navigating the mystic, submerged forests of the freshwater swamp.",
     thumbnail: "https://img.youtube.com/vi/O6m-PI8_zqw/maxresdefault.jpg",
     videoId: "O6m-PI8_zqw",
     type: "youtube",
@@ -62,7 +68,7 @@ const VideoSection = () => {
               {/* Card without <a> to prevent redirect */}
               <div
                 onClick={() => setActiveVideo(video)}
-                className="block relative overflow-hidden rounded-[18px] group cursor-pointer h-[260px] transition-all"
+                className="block relative overflow-hidden rounded-[18px] group cursor-pointer h-[260px] transition-all mb-6"
               >
                 <div className="relative w-full h-full">
                   <Image
@@ -76,14 +82,24 @@ const VideoSection = () => {
                       <Play className="w-6 h-6 text-white fill-white" />
                     </div>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
-                    <h3 className="text-xl font-bold text-white mb-1">
-                      {video.title}
-                    </h3>
-                    <p className="text-xs text-[var(--color-accent)] uppercase tracking-wider">
-                      Watch Now
-                    </p>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+              </div>
+
+              {/* Text Content Below Video */}
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2 tracking-wide uppercase">
+                  {video.title}
+                </h3>
+                <p className="text-sm text-white/50 leading-relaxed max-w-[90%] font-medium">
+                  {video.description}
+                </p>
+                <div
+                  onClick={() => setActiveVideo(video)}
+                  className="mt-4 flex items-center gap-2 text-xs font-bold text-red-500 uppercase tracking-widest cursor-pointer hover:text-white transition-colors group"
+                >
+                  <span className="w-8 h-[1px] bg-red-500 group-hover:bg-white transition-colors" />
+                  Watch Film
                 </div>
               </div>
             </motion.div>
