@@ -33,15 +33,39 @@ const Footer = () => {
             </div>
 
             <div className="flex gap-4 justify-center md:justify-start">
-              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
+              {[
+                {
+                  Icon: Facebook,
+                  href: "https://www.facebook.com/khayerhossain45/",
+                  color: "#1877F2",
+                },
+                {
+                  Icon: Instagram,
+                  href: "https://www.instagram.com/",
+                  color: "#E4405F",
+                },
+                {
+                  Icon: Twitter,
+                  href: "https://x.com/khayerhossain45",
+                  color: "#000000",
+                },
+                {
+                  Icon: Linkedin,
+                  href: "https://www.linkedin.com/in/khayer-hossain/",
+                  color: "#0A66C2",
+                },
+              ].map(({ Icon, href, color }, i) => (
                 <a
                   key={i}
-                  href="#"
-                  className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-red-500 hover:border-red-500 hover:bg-red-500/10 transition-all duration-300 group"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ "--brand-color": color }}
+                  className="w-10 h-10 md:w-12 md:h-12 rounded-[12px] border border-white/10 flex items-center justify-center text-white/40 hover:text-white transition-all duration-300 group hover:border-[var(--brand-color)] hover:bg-[var(--brand-color)] hover:shadow-[0_0_15px_var(--brand-color)]/30"
                 >
                   <Icon
-                    size={16}
-                    className="group-hover:scale-110 transition-transform md:size-[18px]"
+                    size={18}
+                    className="group-hover:scale-110 transition-transform md:size-[20px]"
                   />
                 </a>
               ))}

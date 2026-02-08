@@ -5,6 +5,7 @@ import VideoSection from "../components/VideoSection";
 import AboutSection from "../components/AboutSection";
 import TimelineSection from "../components/TimelineSection";
 import ContactForm from "../components/ContactForm";
+import ExploreSection from "../components/ExploreSection";
 
 import Footer from "../components/Footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <CollageSection />
+      <ExploreSection />
       <VideoSection />
       <TimelineSection />
       <ContactForm />

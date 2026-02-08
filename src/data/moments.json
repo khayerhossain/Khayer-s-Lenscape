@@ -71,15 +71,7 @@
     "img": "https://i.ibb.co.com/5hq4vf2F/IMG-1416.jpg",
     "span": "md:col-span-2 md:row-span-1"
   },
-  {
-    "id": 10,
-    "date": "Feb 03, 2024",
-    "location": "Khulna, Bangladesh",
-    "title": "Mangrove Magic",
-    "description": "Deep inside the Sundarbans.",
-    "img": "https://i.ibb.co.com/TJD9Rj8/IMG-1530.jpg",
-    "span": "md:col-span-1 md:row-span-2"
-  },
+ 
   {
     "id": 11,
     "date": "Feb 05, 2024",

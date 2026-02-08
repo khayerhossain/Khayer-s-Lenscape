@@ -20,6 +20,9 @@ const greatVibes = Great_Vibes({
 export const metadata = {
   title: "Khayer's | Lenscape",
   description: "Capturing souls and moments. professional photography portfolio.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

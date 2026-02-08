@@ -9,21 +9,25 @@ import Container from "./ui/Container";
 const videos = [
   {
     id: 1,
-    title: "Urban Stories",
-    thumbnail: "https://i.ibb.co/VYrS792b/download-19.jpg",
-    videoId: "O6m-PI8_zqw",
+    title: "Rivers",
+    thumbnail:
+      "https://i.ibb.co.com/RTwFJg5H/Screenshot-2026-02-08-at-8-10-13-PM.png", // Placeholder for Facebook video
+    videoId: "1527322588352043", // Facebook Video ID
+    type: "facebook",
   },
   {
     id: 2,
-    title: "Nature's Breath",
-    thumbnail: "https://i.ibb.co/TM0nS59J/download-20.jpg",
-    videoId: "O6m-PI8_zqw",
+    title: "Sreemnagal",
+    thumbnail: "https://img.youtube.com/vi/XfTWMyT-DfQ/maxresdefault.jpg",
+    videoId: "XfTWMyT-DfQ",
+    type: "youtube",
   },
   {
     id: 3,
-    title: "Visual Journey",
+    title: "Latargul Forest",
     thumbnail: "https://img.youtube.com/vi/O6m-PI8_zqw/maxresdefault.jpg",
     videoId: "O6m-PI8_zqw",
+    type: "youtube",
   },
 ];
 
@@ -33,7 +37,7 @@ const VideoSection = () => {
   return (
     <section className="py-24">
       <Container>
-        <div className="flex flex-col md:flex-row items-end justify-between mb-12">
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12">
           <div>
             <h2 className="text-5xl font-bold text-white mb-4">
               Cinematic <span className="text-red-500">Films</span>
@@ -57,7 +61,7 @@ const VideoSection = () => {
             >
               {/* Card without <a> to prevent redirect */}
               <div
-                onClick={() => setActiveVideo(video.videoId)}
+                onClick={() => setActiveVideo(video)}
                 className="block relative overflow-hidden rounded-[18px] group cursor-pointer h-[260px] transition-all"
               >
                 <div className="relative w-full h-full">
@@ -100,13 +104,23 @@ const VideoSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
           >
-            <iframe
-              className="w-full h-full rounded-xl"
-              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&rel=0&modestbranding=1`}
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              title="Video Player"
-            />
+            {activeVideo?.type === "youtube" ? (
+              <iframe
+                className="w-full h-full rounded-xl"
+                src={`https://www.youtube.com/embed/${activeVideo.videoId}?autoplay=1&rel=0&modestbranding=1`}
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title="YouTube Video Player"
+              />
+            ) : (
+              <iframe
+                className="w-full h-full rounded-xl"
+                src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/${activeVideo.videoId}&show_text=0&autoplay=1`}
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title="Facebook Video Player"
+              />
+            )}
           </motion.div>
         </div>
       )}

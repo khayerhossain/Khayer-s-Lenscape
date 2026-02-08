@@ -31,7 +31,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
       </motion.div>
 
-      <Container className="relative z-10 flex flex-col md:flex-row items-end justify-between gap-12">
+      <Container className="relative z-10 flex flex-col md:flex-row items-start md:items-end justify-between gap-12">
         {/* Left Content */}
         <div className="md:w-1/2 mb-8 md:mb-0">
           <motion.div
@@ -43,7 +43,7 @@ const HeroSection = () => {
               Where Every Frame Holds a{" "}
               <span className="text-red-500">Memory</span>
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-[0.95] mb-6 uppercase">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white leading-[0.95] mb-6 uppercase">
               Through <br />
               Khayer’s <span className="text-red-500">Lens</span>
             </h1>
@@ -54,7 +54,7 @@ const HeroSection = () => {
 
             {/* Signature (Replaces Buttons) */}
             <div className="mt-8">
-              <span className="font-[family-name:var(--font-great-vibes)] text-5xl md:text-6xl text-red-600 -rotate-3 block ml-4">
+              <span className="font-[family-name:var(--font-great-vibes)] text-5xl md:text-6xl text-red-600 -rotate-3 block md:ml-4">
                 Khayer&apos;s Lenscape
               </span>
             </div>
@@ -62,7 +62,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right Content: Mini Carousel */}
-        <div className="w-full md:w-auto flex flex-col items-end">
+        <div className="w-full md:w-auto flex flex-col items-center md:items-end">
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -87,7 +87,7 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Navigation & Progress */}
-          <div className="flex items-center gap-6 mt-8 w-full justify-end">
+          <div className="flex items-center gap-6 mt-8 w-full justify-center md:justify-end">
             <div className="flex gap-2">
               <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white cursor-pointer hover:bg-white hover:text-black transition-colors">
                 <ChevronLeft className="w-5 h-5" />

@@ -7,8 +7,8 @@ import Container from "./ui/Container";
 
 const AboutSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden">
-      <Container className="flex flex-col md:flex-row gap-16 items-center z-10 relative">
+    <section className="py-20 md:py-32 relative overflow-hidden">
+      <Container className="flex flex-col md:flex-row gap-16 items-start md:items-center z-10 relative">
         {/* Left: Image Mosaic */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -26,18 +26,18 @@ const AboutSection = () => {
               />
             </div>
           </div>
-          <div className="absolute right-4 md:bottom-0 md:right-0 w-3/4 h-1/2 rounded-3xl z-20 glass p-1">
-            <div className="relative w-full h-full rounded-xl ">
+          <div className="absolute right-0 bottom-16 md:bottom-24 md:-right-4 w-[55%] h-[70%] rounded-3xl z-20 glass p-1">
+            <div className="relative w-full h-full rounded-xl">
               <Image
-                src="https://i.ibb.co.com/xSK7j6FV/IMG-2490.jpg"
+                src="https://i.ibb.co.com/S4WJXhnQ/IMG-0005.jpg"
                 alt="Photographer 2"
                 fill
-                className="object-cover rounded-2xl"
+                className="object-cover object-top rounded-2xl"
               />
             </div>
           </div>
           {/* Decimal decoration */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] md:text-[200px] font-bold text-white/5 z-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] md:text-[200px] font-bold text-white/5 z-0 pointer-events-none">
             01
           </div>
         </motion.div>
