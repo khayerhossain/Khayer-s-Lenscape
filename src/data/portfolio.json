@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Hanging Bridge",
+    "description": "A stunning view of the iconic hanging bridge connecting islands over the serene Kaptai Lake.",
+    "date": "July 2024",
+    "img": "https://i.ibb.co.com/99t4VV76/IMG20240531171904.jpg",
+    "category": "Architecture"
+  },
+  {
+    "id": 2,
+    "title": "Neon Alley",
+    "description": "Exploring the vibrant play of light and shadow in the tight, colorful alleyways of the city.",
+    "date": "July 2024",
+    "img": "https://i.ibb.co.com/BV4c7M8C/IMG20240531171714.jpg",
+    "category": "Street"
+  },
+  {
+    "id": 3,
+    "title": "Fishing Boats",
+    "description": "Traditional fishing boats silhouetted against the breathtaking backdrop of a coastal sunset.",
+    "date": "July 2024",
+    "img": "https://i.ibb.co.com/ccgbL28N/IMG20240531164149.jpg",
+    "category": "Seascape"
+  },
+  {
+    "id": 4,
+    "title": "Urban Reflection",
+    "description": "Looking at the modern city from a different angle, captured through urban reflections.",
+    "date": "July 2024",
+    "img": "https://i.ibb.co.com/7d9MLT56/IMG20240525182650-3.jpg",
+    "category": "Urban"
+  },
+  {
+    "id": 5,
+    "title": "Tea Leaf Plucking",
+    "description": "The dedicated hard work behind every cup, captured in the lush green tea gardens of Sylhet.",
+    "date": "July 2024",
+    "img": "https://i.ibb.co.com/XfRFjTmR/IMG20240525182632-1.jpg",
+    "category": "Nature"
+  },
+  {
+    "id": 6,
+    "title": "Golden Hour Bridge",
+    "description": "Warm golden light dancing on the cables and structure of a modern bridge at dusk.",
+    "date": "July 2024",
+    "img": "https://i.ibb.co.com/3yfh3F3R/IMG20240426170605.jpg",
+    "category": "Architecture"
+  }
+]

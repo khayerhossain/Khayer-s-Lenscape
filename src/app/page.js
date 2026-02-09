@@ -6,6 +6,7 @@ import AboutSection from "../components/AboutSection";
 import TimelineSection from "../components/TimelineSection";
 import ContactForm from "../components/ContactForm";
 import ExploreSection from "../components/ExploreSection";
+import PortfolioCarousel from "../components/PortfolioCarousel";
 
 import Footer from "../components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutSection />
       <CollageSection />
       <ExploreSection />
+      <PortfolioCarousel />
       <VideoSection />
       <TimelineSection />
       <ContactForm />

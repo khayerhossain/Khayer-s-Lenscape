@@ -25,18 +25,24 @@ const Footer = () => {
               <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">
                 Khayer&apos;s <span className="text-red-600">Lenscape</span>
               </h2>
-              <p className="text-[var(--color-dim)] text-lg leading-relaxed max-w-md mb-8">
+              <p className="text-[var(--color-dim)] text-lg leading-relaxed max-w-md mb-4">
                 Wandering the world to capture the raw, the beautiful, and the
                 fleeting. Every image tells a story <br /> thank you for being
                 part of mine.
               </p>
+              <a
+                href="mailto:hello.khayerslendscape@gmail.com"
+                className="text-white/60 hover:text-red-500 transition-colors text-sm font-medium mb-8 block"
+              >
+                hello.khayerslendscape@gmail.com
+              </a>
             </div>
 
             <div className="flex gap-4 justify-center md:justify-start">
               {[
                 {
                   Icon: Facebook,
-                  href: "https://www.facebook.com/khayerhossain45/",
+                  href: "https://www.facebook.com/profile.php?id=61570257675905",
                   color: "#1877F2",
                 },
                 {

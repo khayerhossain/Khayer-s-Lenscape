@@ -7,118 +7,162 @@ import Container from "./ui/Container";
 const exploreItems = [
   {
     id: 1,
-    title: "VILLAGE SUNSET",
-    location: "Dhaka, Bangladesh",
-    src: "https://i.ibb.co.com/pNJ02D6/IMG-0098.jpg",
+    title: "GUAVA MARKET",
+    location: "Barisal, Bangladesh",
+    src: "https://i.ibb.co.com/2Yq6srY8/IMG20240408171721.jpg",
+    span: "md:col-span-2 md:row-span-2",
   },
   {
     id: 2,
-    title: "MOUNTAIN MIST",
-    location: "Bandarban, Bangladesh",
-    src: "https://i.ibb.co.com/5hq4vf2F/IMG-1416.jpg",
+    title: "MORNING ROUTINE",
+    location: "Dhaka, Bangladesh",
+    src: "https://i.ibb.co.com/7NRPpcYz/IMG20240408164947-1.jpg",
+    span: "md:col-span-1 md:row-span-1",
   },
   {
     id: 3,
-    title: "RIVER LIFE",
-    location: "Rajshahi, Bangladesh",
-    src: "https://i.ibb.co.com/XfqRDdfp/IMG-1178.jpg",
+    title: "RAINFOREST PATH",
+    location: "Sylhet, Bangladesh",
+    src: "https://i.ibb.co.com/1GdBTpTD/IMG20240223191338.jpg",
+    span: "md:col-span-1 md:row-span-1",
   },
   {
     id: 4,
-    title: "HERITAGE WALK",
-    location: "Old Dhaka, Bangladesh",
-    src: "https://i.ibb.co.com/zVpk38mN/IMG-1088.jpg",
+    title: "LATE NIGHT TEA",
+    location: "Dhaka, Bangladesh",
+    src: "https://i.ibb.co.com/8gXxp8jW/IMG20231204161303.jpg",
+    span: "md:col-span-1 md:row-span-2",
   },
   {
     id: 5,
-    title: "GOLDEN SANDS",
-    location: "Cox's Bazar, Bangladesh",
-    src: "https://i.ibb.co.com/7dsS2CDr/IMG-1093.jpg",
+    title: "MOUNTAIN SUNSET",
+    location: "Chittagong, Bangladesh",
+    src: "https://i.ibb.co.com/v6v5Hk1Z/IMG-20240429-204848-107.jpg",
+    span: "md:col-span-2 md:row-span-1",
   },
   {
     id: 6,
-    title: "NEON NIGHTS",
+    title: "CYBERPUNK VIBES",
     location: "Dhaka, Bangladesh",
-    src: "https://i.ibb.co.com/CKjVHvXP/IMG-1147.jpg",
+    src: "https://i.ibb.co.com/BV8KYKbX/IMG-7464.jpg",
+    span: "md:col-span-1 md:row-span-1",
   },
   {
     id: 7,
-    title: "SEA OF CLOUDS",
-    location: "Chittagong, Bangladesh",
-    src: "https://i.ibb.co.com/fYqYFt12/IMG-4225.jpg",
+    title: "RIVER CROSSING",
+    location: "Rajshahi, Bangladesh",
+    src: "https://i.ibb.co.com/6538rkZ/IMG-7463.jpg",
+    span: "md:col-span-1 md:row-span-1",
   },
   {
     id: 8,
-    title: "HISTORIC RUINS",
-    location: "Comilla, Bangladesh",
-    src: "https://i.ibb.co.com/8nDTfXdp/IMG-1622.jpg",
+    title: "STREET MUSICIAN",
+    location: "Dhaka, Bangladesh",
+    src: "https://i.ibb.co.com/svhpxJWq/IMG-7460.jpg",
+    span: "md:col-span-1 md:row-span-1",
   },
   {
     id: 9,
-    title: "STUDIO PORTRAITS",
-    location: "Dhaka, Bangladesh",
-    src: "https://i.ibb.co.com/xS8rSsGf/IMG-1621.jpg",
-    mobileFullWidth: true,
+    title: "WATERFALL RUSH",
+    location: "Sylhet, Bangladesh",
+    src: "https://i.ibb.co.com/QjQKNKt0/IMG-7447.jpg",
+    span: "md:col-span-2 md:row-span-1",
   },
 ];
 
 const ExploreSection = () => {
   return (
-    <section className="py-12 md:py-24 h-auto md:h-[90vh] min-h-[700px] flex flex-col justify-center overflow-hidden bg-[#030303] px-[2px] md:px-8 lg:px-10">
-      <div className="w-full max-w-[1400px] mx-auto h-full flex flex-col">
-        <div className="text-center mb-10">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-5xl font-bold text-white uppercase tracking-widest mb-1"
+    <section className="py-20 md:py-32 bg-[#030303] overflow-hidden">
+      <Container>
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div className="max-w-xl">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="text-red-500 font-bold tracking-[0.4em] uppercase text-xs mb-4"
+            >
+              Discover the beauty
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-7xl font-bold text-white leading-tight uppercase tracking-tighter"
+            >
+              Explore <br /> <span className="text-white/20">The Unseen</span>
+            </motion.h2>
+          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="hidden md:block text-right"
           >
-            Way to <span className="text-red-500">Explore!</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-[var(--color-dim)] text-xs md:text-sm font-medium tracking-widest uppercase"
-          >
-            Our world is amazing!
-          </motion.p>
+            <p className="text-white/40 text-sm max-w-[200px] font-medium leading-relaxed">
+              A curated collection of moments captured across the vibrant
+              landscapes of Bangladesh.
+            </p>
+          </motion.div>
         </div>
 
-        <div className="flex-1 grid grid-cols-2 md:grid-cols-3 md:grid-rows-[repeat(3,1fr)] gap-[2px] md:gap-4 h-full min-h-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[250px] gap-4">
           {exploreItems.map((item, index) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.05 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.05, duration: 0.5 }}
               viewport={{ once: true }}
-              className={`relative overflow-hidden rounded-xl border border-white/5 group bg-white/5 w-full aspect-square md:aspect-auto md:h-full ${
-                item.mobileFullWidth ? "col-span-2 md:col-span-1" : ""
-              }`}
+              className={`relative overflow-hidden rounded-2xl group cursor-pointer ${item.span}`}
             >
+              {/* Image with Parallax-like effect on hover */}
               <Image
                 src={item.src}
-                alt={item.title || "Explore"}
+                alt={item.title}
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
               />
 
-              {/* Minimal Overlay */}
-              <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:via-black/60 transition-all duration-500 h-2/3">
-                <div className="opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                  <h3 className="text-sm md:text-lg font-bold text-white tracking-widest uppercase mb-1 drop-shadow-lg">
+              {/* Glassy Overlay Card */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-8">
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  whileHover={{ y: 0, opacity: 1 }}
+                  className="transform transition-transform duration-500"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="h-[1px] w-8 bg-red-500" />
+                    <span className="text-red-500 text-[10px] font-bold tracking-[0.3em] uppercase">
+                      Moment {String(item.id).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight uppercase">
                     {item.title}
                   </h3>
-                  <p className="text-[9px] md:text-[10px] text-white/80 uppercase tracking-[0.2em] font-medium">
-                    {item.location}
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                    <p className="text-[10px] text-white/70 uppercase tracking-widest font-medium">
+                      {item.location}
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Minimal Bottom Info (Visible by default) */}
+              <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center group-hover:opacity-0 transition-opacity duration-300">
+                <div className="bg-black/50 backdrop-blur-sm px-4 py-2 rounded-xl border border-white/5">
+                  <p className="text-[10px] text-white font-bold tracking-widest uppercase truncate max-w-[150px]">
+                    {item.title}
                   </p>
                 </div>
               </div>
+
+              {/* Edge Shine Effect */}
+              <div className="absolute inset-0 border border-white/0 group-hover:border-white/20 rounded-2xl transition-colors duration-700 pointer-events-none" />
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
