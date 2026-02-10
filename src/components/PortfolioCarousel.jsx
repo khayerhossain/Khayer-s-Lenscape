@@ -19,12 +19,12 @@ const PortfolioCarousel = () => {
   const currentItem = portfolioData[currentIndex];
 
   return (
-    <section className="py-20 bg-[#030303] overflow-hidden relative">
+    <section className="py-12 md:py-20 bg-[#030303] overflow-hidden relative">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-red-500/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] bg-red-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <Container>
-        <div className="relative h-[600px] md:h-[700px] w-full rounded-3xl overflow-hidden border border-white/10 bg-white/[0.02] backdrop-blur-sm">
+        <div className="relative h-[450px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 bg-white/[0.02] backdrop-blur-sm">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentItem.id}
@@ -35,34 +35,34 @@ const PortfolioCarousel = () => {
               className="absolute inset-0 flex flex-col md:flex-row"
             >
               {/* Left Content Side - Glassy */}
-              <div className="w-full md:w-[40%] p-8 md:p-16 flex flex-col justify-center relative z-10 bg-black/40 md:bg-transparent backdrop-blur-md md:backdrop-blur-none">
+              <div className="w-full md:w-[40%] p-4 sm:p-6 md:p-12 lg:p-16 flex flex-col justify-center relative z-10 bg-black/40 md:bg-transparent backdrop-blur-md md:backdrop-blur-none">
                 <motion.div
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3, duration: 0.8 }}
                 >
-                  <span className="text-red-500 font-bold uppercase tracking-[0.3em] text-xs mb-4 block">
+                  <span className="text-red-500 font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mb-3 sm:mb-4 block">
                     Portfolio
                   </span>
-                  <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                  <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                     {currentItem.title}
                   </h2>
-                  <div className="w-12 h-[2px] bg-white/20 mb-8" />
-                  <p className="text-[var(--color-dim,rgba(255,255,255,0.6))] text-lg leading-relaxed mb-10 max-w-md">
+                  <div className="w-12 h-[2px] bg-white/20 mb-4 sm:mb-8" />
+                  <p className="text-[var(--color-dim,rgba(255,255,255,0.6))] text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-10 max-w-md">
                     {currentItem.description}
                   </p>
 
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-4">
-                      <span className="text-white/30 uppercase text-[10px] tracking-widest font-bold">
+                  <div className="flex flex-col gap-3 sm:gap-4 text-sm sm:text-base">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <span className="text-white/30 uppercase text-[9px] sm:text-[10px] tracking-widest font-bold">
                         Date
                       </span>
                       <span className="text-white/80 font-medium">
                         {currentItem.date}
                       </span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <span className="text-white/30 uppercase text-[10px] tracking-widest font-bold">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <span className="text-white/30 uppercase text-[9px] sm:text-[10px] tracking-widest font-bold">
                         Category
                       </span>
                       <span className="text-white/80 font-medium">
@@ -97,7 +97,7 @@ const PortfolioCarousel = () => {
           </AnimatePresence>
 
           {/* Indicators */}
-          <div className="absolute bottom-8 left-8 md:left-16 flex gap-3 z-20">
+          <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-8 md:left-16 flex gap-2 sm:gap-3 z-20">
             {portfolioData.map((_, idx) => (
               <button
                 key={idx}
@@ -113,7 +113,7 @@ const PortfolioCarousel = () => {
           </div>
 
           {/* Glassy Floating Text (Optional/Reference matches) */}
-          <div className="absolute top-8 right-8 z-20 hidden md:block">
+          <div className="absolute top-4 sm:top-6 md:top-8 right-4 sm:right-8 z-20 hidden md:block">
             <div className="px-6 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
               <span className="text-white/50 text-xs font-medium tracking-widest uppercase">
                 {String(currentIndex + 1).padStart(2, "0")} /{" "}

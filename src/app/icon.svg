@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle (Optional, can be removed for pure transparency) -->
+  <circle cx="256" cy="256" r="250" fill="#030303"/>
+  
+  <!-- Stylized K -->
+  <path d="M160 120V392" stroke="white" stroke-width="48" stroke-linecap="round"/>
+  <path d="M160 256L340 120" stroke="white" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M160 256L340 392" stroke="#EF4444" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Lens Element (Dot) -->
+  <circle cx="360" cy="256" r="45" fill="white" stroke="#EF4444" stroke-width="8"/>
+  <circle cx="360" cy="256" r="15" fill="#EF4444"/>
+</svg>
