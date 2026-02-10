@@ -103,14 +103,14 @@ const ExploreSection = () => {
   }, [cardsToShow, currentIndex]);
 
   return (
-    <section className="py-20 md:py-32 bg-[#030303] overflow-hidden">
+    <section className="py-20 md:py-32 bg-black overflow-hidden min-h-screen">
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-xl">
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-red-500 font-bold tracking-[0.4em] uppercase text-xs mb-4"
+              className="text-red-600 font-bold tracking-[0.4em] uppercase text-xs mb-4"
             >
               Discover the beauty
             </motion.p>
@@ -118,81 +118,75 @@ const ExploreSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-7xl font-bold text-white leading-tight uppercase tracking-tighter"
+              className="text-4xl md:text-7xl font-[family-name:var(--font-anton)] text-white leading-tight uppercase tracking-tighter"
             >
               Explore <br /> <span className="text-white/20">The Unseen</span>
             </motion.h2>
           </div>
-          <div className="flex items-center gap-4">
-            <button
-              onClick={prevSlide}
-              className="p-4 rounded-full border border-white/10 text-white hover:bg-white/5 transition-colors group disabled:opacity-30"
-              disabled={currentIndex === 0}
-            >
-              <ChevronLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="p-4 rounded-full border border-white/10 text-white hover:bg-white/5 transition-colors group disabled:opacity-30"
-              disabled={currentIndex >= exploreItems.length - cardsToShow}
-            >
-              <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
         </div>
 
-        <div className="relative overflow-visible" ref={containerRef}>
-          <motion.div
-            className="flex gap-6"
-            animate={{
-              x: `calc(-${currentIndex * (100 / cardsToShow)}% - ${currentIndex * (24 / cardsToShow)}px)`,
-            }}
-            transition={{ type: "spring", damping: 25, stiffness: 120 }}
-          >
-            {exploreItems.map((item, index) => (
-              <motion.div
-                key={item.id}
-                className="relative flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] aspect-[3/4] overflow-hidden rounded-2xl group cursor-pointer border border-white/5"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.05, duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                {/* Image */}
-                <Image
-                  src={item.src}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                />
+        <div className="relative h-[55vh] md:h-[65vh] w-full flex gap-1 group/accordion overflow-hidden rounded-3xl">
+          {exploreItems.slice(0, 5).map((item, index) => (
+            <motion.div
+              key={item.id}
+              className="relative flex-1 hover:flex-[2.5] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden cursor-pointer"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              {/* Background Image */}
+              <Image
+                src={item.src}
+                alt={item.title}
+                fill
+                className="object-cover transition-transform duration-[2s] hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                priority={index < 2}
+              />
 
-                {/* Dark Overlay with Text */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
+              {/* Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
+              <div className="absolute inset-0 bg-red-600/10 opacity-0 hover:opacity-100 transition-opacity duration-700" />
 
-                <div className="absolute inset-0 flex flex-col justify-end p-8 gap-4">
-                  <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    className="flex flex-col gap-2"
-                  >
-                    <p className="text-white/60 text-[11px] font-bold tracking-[0.3em] uppercase">
-                      TUR №{item.id}
-                    </p>
-                    <h3 className="text-xl md:text-2xl font-black text-white leading-tight uppercase tracking-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-white/40 text-[10px] uppercase tracking-widest font-medium">
+              {/* Vertical Text (Visible when not expanded) */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-100 transition-opacity duration-300">
+                <p className="text-white/30 text-[10px] uppercase tracking-[0.5em] font-bold origin-center -rotate-90 whitespace-nowrap mb-24">
+                  {item.location.split(",")[0]}
+                </p>
+              </div>
+
+              {/* Expanded Content */}
+              <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 opacity-0 hover:opacity-100 transition-opacity duration-500 delay-100">
+                <div className="text-left space-y-6">
+                  <div>
+                    <p className="text-red-500 text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase mb-2">
                       {item.location}
                     </p>
-                  </motion.div>
-                </div>
+                    <h3 className="text-3xl md:text-6xl font-[family-name:var(--font-anton)] text-white leading-none uppercase tracking-tighter">
+                      {item.title}
+                    </h3>
+                  </div>
 
-                {/* Glassy Border on Hover */}
-                <div className="absolute inset-0 border border-white/0 group-hover:border-white/20 rounded-2xl transition-colors duration-700 pointer-events-none" />
-              </motion.div>
-            ))}
-          </motion.div>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-[1px] bg-red-500" />
+                      <span className="text-white/60 text-[10px] font-black tracking-widest uppercase">
+                        National Moment
+                      </span>
+                    </div>
+
+                    <p className="text-white/30 text-[10px] uppercase tracking-[0.3em] font-medium">
+                      Lens №00{item.id}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Border Overlay */}
+              <div className="absolute inset-0 border-r border-white/5 last:border-0" />
+            </motion.div>
+          ))}
         </div>
       </Container>
     </section>

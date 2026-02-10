@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Great_Vibes } from "next/font/google";
+import { Geist, Geist_Mono, Great_Vibes, Anton, Hind_Siliguri } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,6 +17,18 @@ const greatVibes = Great_Vibes({
   weight: "400",
 });
 
+const anton = Anton({
+  variable: "--font-anton",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const hindSiliguri = Hind_Siliguri({
+  variable: "--font-hind-siliguri",
+  subsets: ["bengali", "latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata = {
   title: "Khayer's | Lenscape",
   description: "Capturing souls and moments. professional photography portfolio.",
@@ -29,7 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${anton.variable} ${hindSiliguri.variable} antialiased`}
       >
         {children}
       </body>

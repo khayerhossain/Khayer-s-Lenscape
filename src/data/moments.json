@@ -6,7 +6,8 @@
     "title": "Village Sunset",
     "description": "Capturing the raw energy of the city streets.",
     "img": "https://i.ibb.co.com/pNJ02D6/IMG-0098.jpg",
-    "span": "md:col-span-2 md:row-span-2"
+    "span": "md:col-span-2 md:row-span-2",
+    "category": "Sky"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "title": "Mountain",
     "description": "The morning mist over the tea gardens.",
     "img": "https://i.ibb.co.com/cKHngz6h/IMG-0175.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "title": "River and Boat",
     "description": "Sunsets by the Bay of Bengal.",
     "img": "https://i.ibb.co.com/DgP2TCBV/IMG-0187.jpg",
-    "span": "md:col-span-1 md:row-span-2"
+    "span": "md:col-span-1 md:row-span-2",
+    "category": "River"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "title": "Heritage Walk",
     "description": "Ancient architecture standing the test of time.",
     "img": "https://i.ibb.co.com/zVpk38mN/IMG-1088.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Urban"
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "title": "Golden Sands",
     "description": "Infinite horizons on the world's longest beach.",
     "img": "https://i.ibb.co.com/7dsS2CDr/IMG-1093.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 7,
@@ -51,7 +56,8 @@
     "title": "Neon Nights",
     "description": "The city comes alive after dark.",
     "img": "https://i.ibb.co.com/CKjVHvXP/IMG-1147.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Urban"
   },
   {
     "id": 8,
@@ -60,7 +66,8 @@
     "title": "River Life",
     "description": "The Padma river in its full glory.",
     "img": "https://i.ibb.co.com/XfqRDdfp/IMG-1178.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 9,
@@ -69,9 +76,9 @@
     "title": "Mountain Mist",
     "description": "Waking up above the clouds.",
     "img": "https://i.ibb.co.com/5hq4vf2F/IMG-1416.jpg",
-    "span": "md:col-span-2 md:row-span-1"
+    "span": "md:col-span-2 md:row-span-1",
+    "category": "Nature"
   },
- 
   {
     "id": 11,
     "date": "Feb 05, 2024",
@@ -79,7 +86,8 @@
     "title": "Studio Portraits",
     "description": "Controlled light, raw emotions.",
     "img": "https://i.ibb.co.com/xS8rSsGf/IMG-1621.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 12,
@@ -88,7 +96,8 @@
     "title": "Historic Ruins",
     "description": "Echoes of the past at Mainamati.",
     "img": "https://i.ibb.co.com/8nDTfXdp/IMG-1622.jpg",
-    "span": "md:col-span-2 md:row-span-2"
+    "span": "md:col-span-2 md:row-span-2",
+    "category": "Outdoor"
   },
   {
     "id": 13,
@@ -97,7 +106,8 @@
     "title": "Street Stories",
     "description": "Every face tells a different tale.",
     "img": "https://i.ibb.co.com/67hh5btw/IMG-1640.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 14,
@@ -106,7 +116,8 @@
     "title": "Rural Peace",
     "description": "Quiet moments in the countryside.",
     "img": "https://i.ibb.co.com/mCXLKwj0/IMG-1644.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 15,
@@ -115,7 +126,8 @@
     "title": "Architecture Detail",
     "description": "The beauty in the small things.",
     "img": "https://i.ibb.co.com/9HRLtjFq/IMG-1679.jpg",
-    "span": "md:col-span-2 md:row-span-1"
+    "span": "md:col-span-2 md:row-span-1",
+    "category": "Urban"
   },
   {
     "id": 16,
@@ -124,7 +136,8 @@
     "title": "Water Lily Ponds",
     "description": "Floating wonders of nature.",
     "img": "https://i.ibb.co.com/7tm0TjDH/IMG-1683.jpg",
-    "span": "md:col-span-2 md:row-span-1"
+    "span": "md:col-span-2 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 17,
@@ -133,7 +146,8 @@
     "title": "Candid Moments",
     "description": "Life as it happens, unscripted.",
     "img": "https://i.ibb.co.com/Pzjn6F35/IMG-1717.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 18,
@@ -142,7 +156,8 @@
     "title": "Harbor Life",
     "description": "Busy mornings at the port.",
     "img": "https://i.ibb.co.com/B2ndTdHK/IMG-1724.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 19,
@@ -151,7 +166,8 @@
     "title": "Festival Colors",
     "description": "Vibrant celebrations across the city.",
     "img": "https://i.ibb.co.com/HpDxVNGG/IMG-1729.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 20,
@@ -160,7 +176,8 @@
     "title": "Floating Markets",
     "description": "Trading on the calm waters.",
     "img": "https://i.ibb.co.com/BHw5Bh08/IMG-1737.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 21,
@@ -169,7 +186,8 @@
     "title": "Coffee Shop Vibes",
     "description": "Quiet afternoons with a lens.",
     "img": "https://i.ibb.co.com/WWLxnFn2/IMG-1741.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 22,
@@ -178,7 +196,8 @@
     "title": "Mountain Streams",
     "description": "Crystal clear water flowing through stones.",
     "img": "https://i.ibb.co.com/qLtX3NZK/IMG-1752.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 23,
@@ -187,7 +206,8 @@
     "title": "Metro Rail Dawn",
     "description": "Modernity meeting the morning sun.",
     "img": "https://i.ibb.co.com/jZTyv8H2/IMG-1756.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Sky"
   },
   {
     "id": 24,
@@ -196,7 +216,8 @@
     "title": "Silk Weavers",
     "description": "Intricate craftsmanship in action.",
     "img": "https://i.ibb.co.com/NgMbyTJt/IMG-1760.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 25,
@@ -205,7 +226,8 @@
     "title": "Rainy Days",
     "description": "Reflections on the wet pavement.",
     "img": "https://i.ibb.co.com/svG9GwP3/IMG-1761.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 26,
@@ -214,7 +236,8 @@
     "title": "Lighthouse View",
     "description": "Guiding light over the vast ocean.",
     "img": "https://i.ibb.co.com/LzdhXcmk/IMG-1779.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 27,
@@ -223,7 +246,8 @@
     "title": "Park Life",
     "description": "Families enjoying a sunny weekend.",
     "img": "https://i.ibb.co.com/BHGVW7mR/IMG-1783.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 28,
@@ -232,7 +256,8 @@
     "title": "Brahmaputra Banks",
     "description": "Peaceful views along the river.",
     "img": "https://i.ibb.co.com/67nDLMcS/IMG-1804.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 29,
@@ -241,7 +266,8 @@
     "title": "Street Food Culture",
     "description": "The flavors of the city captured.",
     "img": "https://i.ibb.co.com/fYsg7HsF/IMG-1815.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 30,
@@ -250,7 +276,8 @@
     "title": "Date Palm Extraction",
     "description": "Traditional winters in the village.",
     "img": "https://i.ibb.co.com/S4FnDDzw/IMG-1817.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 31,
@@ -259,7 +286,8 @@
     "title": "Modern Skyline",
     "description": "The growing verticality of Dhaka.",
     "img": "https://i.ibb.co.com/Q7qLrhw9/IMG-1818.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Sky"
   },
   {
     "id": 32,
@@ -268,7 +296,8 @@
     "title": "Handloom Heritage",
     "description": "The click-clack of the looms.",
     "img": "https://i.ibb.co.com/27dhtpWJ/IMG-1831.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Urban"
   },
   {
     "id": 33,
@@ -277,7 +306,8 @@
     "title": "Art Gallery Calm",
     "description": "Appreciating creativity in silence.",
     "img": "https://i.ibb.co.com/27YpMjyY/IMG-1834.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Urban"
   },
   {
     "id": 34,
@@ -286,7 +316,8 @@
     "title": "Mahasthangarh Echoes",
     "description": "Ancient civilizations under our feet.",
     "img": "https://i.ibb.co.com/k2czGPdM/IMG-1842.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 35,
@@ -295,7 +326,8 @@
     "title": "Book Fair Hubbub",
     "description": "A celebration of literature and life.",
     "img": "https://i.ibb.co.com/xtMcFS2G/IMG-1856.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 36,
@@ -304,7 +336,8 @@
     "title": "Shipbreaking Yards",
     "description": "The industrial giants being reclaimed.",
     "img": "https://i.ibb.co.com/8DyFNG4N/IMG-1867.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 37,
@@ -313,7 +346,8 @@
     "title": "Flower Market",
     "description": "Colors and scents at first light.",
     "img": "https://i.ibb.co.com/FqzTx5RC/IMG-1875.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 38,
@@ -322,7 +356,8 @@
     "title": "Paddy Fields",
     "description": "The golden harvest ready for picking.",
     "img": "https://i.ibb.co.com/YnHyM9W/IMG-1890.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 39,
@@ -331,7 +366,8 @@
     "title": "Cricket Fever",
     "description": "Grassroots passion in every alleyway.",
     "img": "https://i.ibb.co.com/67NS2DT6/IMG-1913.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 40,
@@ -340,7 +376,8 @@
     "title": "Stone Collection",
     "description": "Hard labor at the Jaflong border.",
     "img": "https://i.ibb.co.com/ymyQRMcS/IMG-1917.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 41,
@@ -349,7 +386,8 @@
     "title": "Bridge Sunset",
     "description": "Golden light over the metal spans.",
     "img": "https://i.ibb.co.com/Cp58pxn1/IMG-1919.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Sky"
   },
   {
     "id": 42,
@@ -358,7 +396,8 @@
     "title": "Hill Tracks",
     "description": "Winding roads through the green peaks.",
     "img": "https://i.ibb.co.com/XfNnkQty/IMG-1924.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 43,
@@ -367,7 +406,8 @@
     "title": "Rickshaw Art",
     "description": "The moving galleries of the capital.",
     "img": "https://i.ibb.co.com/spBs0gBd/IMG-2155.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 44,
@@ -376,7 +416,8 @@
     "title": "Village Morning",
     "description": "Quiet streets before the day begins.",
     "img": "https://i.ibb.co.com/5W9YxMYh/IMG-2401.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Sky"
   },
   {
     "id": 45,
@@ -385,7 +426,8 @@
     "title": "University Life",
     "description": "Dreams and discussions on the campus.",
     "img": "https://i.ibb.co.com/fVQb3N4b/IMG-2425.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 46,
@@ -394,7 +436,8 @@
     "title": "Tea Garden Trails",
     "description": "Lost in the emerald waves of tea.",
     "img": "https://i.ibb.co.com/yBp8BcHS/IMG-2456.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 47,
@@ -403,7 +446,8 @@
     "title": "Night Markets",
     "description": "The hustle that never ends.",
     "img": "https://i.ibb.co.com/FkDfk3Vx/IMG-2466.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 48,
@@ -412,7 +456,8 @@
     "title": "Kaptai Lake",
     "description": "Serenity on the sapphire waters.",
     "img": "https://i.ibb.co.com/d4RLFPG8/IMG-2471.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 49,
@@ -421,7 +466,8 @@
     "title": "Urban Shadows",
     "description": "High contrast moments in the sun.",
     "img": "https://i.ibb.co.com/W4GMrVnR/IMG-2478.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Urban"
   },
   {
     "id": 50,
@@ -430,7 +476,8 @@
     "title": "Backwater Beauty",
     "description": "Bangladesh's own little Venice.",
     "img": "https://i.ibb.co.com/B5sVK9pR/IMG-2490.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 51,
@@ -439,7 +486,8 @@
     "title": "Portrait in Red",
     "description": "Testing the limits of color.",
     "img": "https://i.ibb.co.com/tPb2NRgR/IMG-2541.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 52,
@@ -448,7 +496,8 @@
     "title": "Monsoon Clouds",
     "description": "The dramatic sky before the storm.",
     "img": "https://i.ibb.co.com/1Nks2R0/IMG-3973.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Sky"
   },
   {
     "id": 53,
@@ -457,7 +506,8 @@
     "title": "Abandoned Spaces",
     "description": "Finding beauty in decay.",
     "img": "https://i.ibb.co.com/hJrxVkTb/IMG-3997.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 54,
@@ -466,7 +516,8 @@
     "title": "Mango Orchards",
     "description": "The sweet scent of summer.",
     "img": "https://i.ibb.co.com/kdYCLbZ/IMG-4026.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 55,
@@ -475,7 +526,8 @@
     "title": "Industrial Geometry",
     "description": "Lines and shapes in the factory.",
     "img": "https://i.ibb.co.com/BHsKqw0Z/IMG-4212.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 56,
@@ -484,7 +536,8 @@
     "title": "Sea of Clouds",
     "description": "Sunrise from the highest peak.",
     "img": "https://i.ibb.co.com/fYqYFt12/IMG-4225.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Sky"
   },
   {
     "id": 57,
@@ -493,7 +546,8 @@
     "title": "Window Light",
     "description": "Soft morning glow through the curtains.",
     "img": "https://i.ibb.co.com/dwVLCtr5/IMG-4241.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 58,
@@ -502,7 +556,8 @@
     "title": "Swamp Forest",
     "description": "Entering the mystic Ratargul.",
     "img": "https://i.ibb.co.com/VWng5HYS/IMG-4276.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 59,
@@ -511,7 +566,8 @@
     "title": "Monochrome City",
     "description": "Stark contrasts and deep blacks.",
     "img": "https://i.ibb.co.com/60L4QZK2/IMG-4473.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Urban"
   },
   {
     "id": 60,
@@ -520,7 +576,8 @@
     "title": "Sundarbans Wildlife",
     "description": "A glimpse of the elusive king.",
     "img": "https://i.ibb.co.com/hxRGF6WP/IMG-5048.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Sky"
   },
   {
     "id": 61,
@@ -529,7 +586,8 @@
     "title": "Old Town Alley",
     "description": "Narrow paths and hidden histories.",
     "img": "https://i.ibb.co.com/LzxNQgt3/IMG-5225.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 62,
@@ -538,7 +596,8 @@
     "title": "Beach Football",
     "description": "Pure joy at the water's edge.",
     "img": "https://i.ibb.co.com/jPLN3gPH/IMG-6656.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 63,
@@ -547,7 +606,8 @@
     "title": "Rooftop Views",
     "description": "Watching the city breath from above.",
     "img": "https://i.ibb.co.com/N6JWrkk1/IMG-6657.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 64,
@@ -556,7 +616,8 @@
     "title": "Waterfall Rush",
     "description": "The power of nature in the monsoon.",
     "img": "https://i.ibb.co.com/QjQKNKt0/IMG-7447.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 65,
@@ -565,7 +626,8 @@
     "title": "Street Musician",
     "description": "Melodies that fill the evening air.",
     "img": "https://i.ibb.co.com/svhpxJWq/IMG-7460.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 66,
@@ -574,7 +636,8 @@
     "title": "River Crossing",
     "description": "Small boats on the mighty Padma.",
     "img": "https://i.ibb.co.com/6538rkZ/IMG-7463.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 67,
@@ -583,7 +646,8 @@
     "title": "Cyberpunk Vibes",
     "description": "Neon reflections and high tech low life.",
     "img": "https://i.ibb.co.com/BV8KYKbX/IMG-7464.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Urban"
   },
   {
     "id": 68,
@@ -592,7 +656,8 @@
     "title": "Mountain Sunset",
     "description": "Ending the day on a high note.",
     "img": "https://i.ibb.co.com/v6v5Hk1Z/IMG-20240429-204848-107.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 69,
@@ -601,7 +666,8 @@
     "title": "Late Night Tea",
     "description": "Stories over a cup of 'Rong Cha'.",
     "img": "https://i.ibb.co.com/8gXxp8jW/IMG20231204161303.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 70,
@@ -610,7 +676,8 @@
     "title": "Rainforest Path",
     "description": "A journey into the deep green.",
     "img": "https://i.ibb.co.com/1GdBTpTD/IMG20240223191338.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 71,
@@ -619,7 +686,8 @@
     "title": "Morning Routine",
     "description": "The city wakes up slowly.",
     "img": "https://i.ibb.co.com/7NRPpcYz/IMG20240408164947-1.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Sky"
   },
   {
     "id": 72,
@@ -628,7 +696,8 @@
     "title": "Guava Market",
     "description": "Floating fruits on the canal.",
     "img": "https://i.ibb.co.com/2Yq6srY8/IMG20240408171721.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 73,
@@ -637,7 +706,8 @@
     "title": "Golden Hour Bridge",
     "description": "Light dancing on the cables.",
     "img": "https://i.ibb.co.com/3yfh3F3R/IMG20240426170605.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   },
   {
     "id": 74,
@@ -646,7 +716,8 @@
     "title": "Tea Leaf Plucking",
     "description": "Hard work behind every cup.",
     "img": "https://i.ibb.co.com/XfRFjTmR/IMG20240525182632-1.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Nature"
   },
   {
     "id": 75,
@@ -655,7 +726,8 @@
     "title": "Urban Reflection",
     "description": "Looking at the city from a different angle.",
     "img": "https://i.ibb.co.com/7d9MLT56/IMG20240525182650-3.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Urban"
   },
   {
     "id": 76,
@@ -664,7 +736,8 @@
     "title": "Fishing Boats",
     "description": "Against the backdrop of the setting sun.",
     "img": "https://i.ibb.co.com/ccgbL28N/IMG20240531164149.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "River"
   },
   {
     "id": 77,
@@ -673,7 +746,8 @@
     "title": "Neon Alley",
     "description": "Light and shadow in the tight spaces.",
     "img": "https://i.ibb.co.com/BV4c7M8C/IMG20240531171714.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Urban"
   },
   {
     "id": 78,
@@ -682,6 +756,7 @@
     "title": "Hanging Bridge",
     "description": "Connecting islands over the lake.",
     "img": "https://i.ibb.co.com/99t4VV76/IMG20240531171904.jpg",
-    "span": "md:col-span-1 md:row-span-1"
+    "span": "md:col-span-1 md:row-span-1",
+    "category": "Outdoor"
   }
 ]

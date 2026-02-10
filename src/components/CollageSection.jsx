@@ -18,6 +18,15 @@ const allImages = moments.map((item) => ({
 const CollageSection = () => {
   const [visibleCount, setVisibleCount] = useState(12);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const categories = ["All", "Outdoor", "Nature", "River", "Sky", "Urban"];
+
+  const filteredImages = allImages.filter((img) => {
+    const moment = moments.find((m) => m.id === img.id);
+    if (activeCategory === "All") return true;
+    return moment?.category === activeCategory;
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -29,32 +38,24 @@ const CollageSection = () => {
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.9, y: 20 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: [0.21, 0.45, 0.32, 0.9],
-      },
-    },
+  const handleCategoryChange = (category) => {
+    setActiveCategory(category);
+    setVisibleCount(12);
   };
 
   const handleToggleView = () => {
-    if (visibleCount >= allImages.length) {
+    if (visibleCount >= filteredImages.length) {
       const gridElement = document.getElementById("collage-grid");
       if (gridElement) {
         gridElement.scrollIntoView({ behavior: "smooth", block: "start" });
       }
       setTimeout(() => setVisibleCount(12), 300);
     } else {
-      setVisibleCount((prev) => Math.min(prev + 12, allImages.length));
+      setVisibleCount((prev) => Math.min(prev + 12, filteredImages.length));
     }
   };
 
-  const isAllVisible = visibleCount >= allImages.length;
+  const isAllVisible = visibleCount >= filteredImages.length;
 
   return (
     <section className="py-24 relative overflow-hidden">
@@ -82,20 +83,21 @@ const CollageSection = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex gap-6 mt-8 md:mt-0 text-[var(--color-dim)] text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold"
+            className="flex flex-wrap gap-4 md:gap-6 mt-8 md:mt-0 text-[var(--color-dim)] text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold"
           >
-            <span className="text-white border-b border-red-500 cursor-pointer pb-1">
-              All
-            </span>
-            <span className="hover:text-white cursor-pointer transition-colors pb-1">
-              Portrait
-            </span>
-            <span className="hover:text-white cursor-pointer transition-colors pb-1">
-              Landscape
-            </span>
-            <span className="hover:text-white cursor-pointer transition-colors pb-1">
-              Urban
-            </span>
+            {categories.map((cat) => (
+              <span
+                key={cat}
+                onClick={() => handleCategoryChange(cat)}
+                className={`cursor-pointer transition-all duration-300 pb-1 border-b-2 ${
+                  activeCategory === cat
+                    ? "text-white border-red-500"
+                    : "border-transparent hover:text-white"
+                }`}
+              >
+                {cat}
+              </span>
+            ))}
           </motion.div>
         </div>
 
@@ -103,11 +105,11 @@ const CollageSection = () => {
           id="collage-grid"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          animate="visible"
+          key={activeCategory}
           className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4"
         >
-          {allImages.slice(0, visibleCount).map((img, i) => (
+          {filteredImages.slice(0, visibleCount).map((img, i) => (
             <motion.div
               key={img.id}
               initial={{ opacity: 0, scale: 0.9, y: 20 }}

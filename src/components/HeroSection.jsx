@@ -38,27 +38,55 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="border-l-4 border-red-600 pl-6 py-2"
           >
-            <p className="text-white/80 text-xs md:text-base tracking-wider mb-2 font-medium">
-              Where Every Frame Holds a{" "}
-              <span className="text-red-500">Memory</span>
-            </p>
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white leading-[0.95] mb-6 uppercase">
+            <div className="mb-8">
+              <p className="text-red-500 text-xs md:text-sm tracking-[0.3em] font-bold uppercase mb-1">
+                Where Every Frame Holds a Memory
+              </p>
+              <p className="text-white/60 text-[10px] md:text-xs tracking-widest font-medium uppercase">
+                EST. 2023
+              </p>
+            </div>
+
+            <h1 className="text-5xl sm:text-7xl md:text-9xl font-[family-name:var(--font-anton)] text-white leading-[0.85] mb-8 uppercase tracking-tighter">
               Through <br />
               Khayer’s <span className="text-red-500">Lens</span>
             </h1>
-            <i className="text-white/70 text-xs md:text-base max-w-xl leading-relaxed mb-8 block">
-              I will one day frame the world with my photography and cinematic
-              videos, turning simple moments into memories.
-            </i>
 
-            {/* Signature (Replaces Buttons) */}
-            <div className="mt-8">
-              <span className="font-[family-name:var(--font-great-vibes)] text-5xl md:text-6xl text-red-600 -rotate-3 block md:ml-4">
-                Khayer&apos;s Lenscape
+            <div className="flex items-center gap-4">
+              <span className="text-white/40 font-serif italic text-lg">
+                “ ”
               </span>
+              <div className="w-12 h-[1px] bg-red-600/50" />
+              <p className="text-red-500 font-[family-name:var(--font-hind-siliguri)] text-lg md:text-xl font-medium">
+                প্রতিটি ফ্রেমে বন্দী থাকে এক একটি অনুভূতি!
+              </p>
             </div>
           </motion.div>
+
+          <motion.i
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-white/50 text-xs md:text-sm max-w-xl leading-relaxed mt-8 block pl-7"
+          >
+            I will one day frame the world with my photography and cinematic
+            videos, turning simple moments into memories.
+          </motion.i>
+
+          {/* Signature */}
+          <div className="mt-8 flex justify-start md:ml-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <span className="font-[family-name:var(--font-great-vibes)] text-5xl md:text-6xl text-red-500 block leading-none">
+                Khayer Hossain
+              </span>
+            </motion.div>
+          </div>
         </div>
 
         {/* Right Content: Mini Carousel */}
@@ -72,16 +100,35 @@ const HeroSection = () => {
             {cards.map((card, i) => (
               <div
                 key={i}
-                className="w-32 h-44 md:w-40 md:h-56 rounded-2xl overflow-hidden relative border-2 border-white/20 shadow-2xl cursor-pointer hover:-translate-y-2 transition-transform duration-300"
+                className="group relative w-28 h-40 md:w-36 md:h-52 rounded-2xl overflow-hidden cursor-pointer hover:-translate-y-2 transition-transform duration-500"
               >
-                <Image
-                  src={card.src}
-                  alt={card.title}
-                  fill
-                  className="object-cover"
-                  priority
-                  quality={75}
-                />
+                {/* Thin Transparent Border */}
+                <div className="absolute inset-0 border border-white/10 rounded-2xl z-20 pointer-events-none" />
+
+                {/* Highly Transparent Layer (No Blur) */}
+                <div className="absolute inset-0 bg-white/[0.02] z-[5] group-hover:bg-white/[0.05] transition-colors duration-500" />
+
+                <div className="relative w-full h-full p-[1px]">
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                    <Image
+                      src={card.src}
+                      alt={card.title}
+                      fill
+                      className="object-cover transition-transform duration-700"
+                      priority
+                      quality={75}
+                    />
+                    {/* Minimal Inner Glow */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                </div>
+
+                {/* Subtitle/Overlay */}
+                <div className="absolute inset-x-0 bottom-3 px-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-[8px] text-white/40 tracking-[0.3em] font-bold uppercase truncate">
+                    {card.title}
+                  </p>
+                </div>
               </div>
             ))}
           </motion.div>

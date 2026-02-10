@@ -34,47 +34,48 @@ const PortfolioCarousel = () => {
               transition={{ duration: 1 }}
               className="absolute inset-0 flex flex-col md:flex-row"
             >
-              {/* Left Content Side - Glassy */}
-              <div className="w-full md:w-[40%] p-4 sm:p-6 md:p-12 lg:p-16 flex flex-col justify-center relative z-10 bg-black/40 md:bg-transparent backdrop-blur-md md:backdrop-blur-none">
+              {/* Left Content Side */}
+              <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-16 lg:p-24 flex flex-col justify-center relative z-20">
                 <motion.div
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3, duration: 0.8 }}
+                  className="relative z-10"
                 >
-                  <span className="text-red-500 font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mb-3 sm:mb-4 block">
-                    Portfolio
+                  <span className="text-red-500 font-bold uppercase tracking-[0.4em] text-[10px] sm:text-xs mb-4 block">
+                    Featured Work
                   </span>
-                  <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
                     {currentItem.title}
                   </h2>
-                  <div className="w-12 h-[2px] bg-white/20 mb-4 sm:mb-8" />
-                  <p className="text-[var(--color-dim,rgba(255,255,255,0.6))] text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-10 max-w-md">
+                  <div className="w-16 h-[2px] bg-red-600/50 mb-8 sm:mb-10" />
+                  <p className="text-white/60 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-12 max-w-xl">
                     {currentItem.description}
                   </p>
 
-                  <div className="flex flex-col gap-3 sm:gap-4 text-sm sm:text-base">
-                    <div className="flex items-center gap-3 sm:gap-4">
-                      <span className="text-white/30 uppercase text-[9px] sm:text-[10px] tracking-widest font-bold">
+                  <div className="grid grid-cols-2 gap-8 max-w-sm">
+                    <div className="space-y-1">
+                      <span className="text-white/20 uppercase text-[10px] tracking-widest font-bold">
                         Date
                       </span>
-                      <span className="text-white/80 font-medium">
+                      <p className="text-white/90 font-medium text-sm md:text-base">
                         {currentItem.date}
-                      </span>
+                      </p>
                     </div>
-                    <div className="flex items-center gap-3 sm:gap-4">
-                      <span className="text-white/30 uppercase text-[9px] sm:text-[10px] tracking-widest font-bold">
+                    <div className="space-y-1">
+                      <span className="text-white/20 uppercase text-[10px] tracking-widest font-bold">
                         Category
                       </span>
-                      <span className="text-white/80 font-medium">
+                      <p className="text-white/90 font-medium text-sm md:text-base">
                         {currentItem.category}
-                      </span>
+                      </p>
                     </div>
                   </div>
                 </motion.div>
               </div>
 
               {/* Right Image Side */}
-              <div className="w-full md:w-[60%] relative h-full">
+              <div className="w-full md:w-1/2 relative h-full">
                 <motion.div
                   initial={{ scale: 1.1, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
@@ -88,9 +89,9 @@ const PortfolioCarousel = () => {
                     className="object-cover"
                     priority
                   />
-                  {/* Subtle Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-transparent hidden md:block" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent md:hidden" />
+                  {/* Perfect Blending Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#030303] via-[#030303]/40 to-transparent hidden md:block" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent md:hidden" />
                 </motion.div>
               </div>
             </motion.div>
