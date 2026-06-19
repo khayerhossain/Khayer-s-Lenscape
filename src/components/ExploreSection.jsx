@@ -6,65 +6,13 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Container from "./ui/Container";
 
-const exploreItems = [
-  {
-    id: 1,
-    title: "GUAVA MARKET",
-    location: "Barisal, Bangladesh",
-    src: "https://i.ibb.co.com/2Yq6srY8/IMG20240408171721.jpg",
-  },
-  {
-    id: 2,
-    title: "MORNING ROUTINE",
-    location: "Dhaka, Bangladesh",
-    src: "https://i.ibb.co.com/7NRPpcYz/IMG20240408164947-1.jpg",
-  },
-  {
-    id: 3,
-    title: "RAINFOREST PATH",
-    location: "Sylhet, Bangladesh",
-    src: "https://i.ibb.co.com/1GdBTpTD/IMG20240223191338.jpg",
-  },
-  {
-    id: 4,
-    title: "RED UMBRELLA",
-    location: "Kyoto, Japan",
-    src: "https://i.ibb.co.com/xS8rSsGf/IMG-1621.jpg",
-  },
-  {
-    id: 5,
-    title: "MOUNTAIN SUNSET",
-    location: "Chittagong, Bangladesh",
-    src: "https://i.ibb.co.com/v6v5Hk1Z/IMG-20240429-204848-107.jpg",
-  },
-  {
-    id: 6,
-    title: "CYBERPUNK VIBES",
-    location: "Dhaka, Bangladesh",
-    src: "https://i.ibb.co.com/BV8KYKbX/IMG-7464.jpg",
-  },
-  {
-    id: 7,
-    title: "RIVER CROSSING",
-    location: "Rajshahi, Bangladesh",
-    src: "https://i.ibb.co.com/6538rkZ/IMG-7463.jpg",
-  },
-  {
-    id: 8,
-    title: "STREET MUSICIAN",
-    location: "Dhaka, Bangladesh",
-    src: "https://i.ibb.co.com/svhpxJWq/IMG-7460.jpg",
-  },
-  {
-    id: 9,
-    title: "WATERFALL RUSH",
-    location: "Sylhet, Bangladesh",
-    src: "https://i.ibb.co.com/QjQKNKt0/IMG-7447.jpg",
-  },
-];
-
-const ExploreSection = () => {
+const ExploreSection = ({ initialExploreItems = [] }) => {
+  const exploreItems = initialExploreItems;
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  if (exploreItems.length === 0) {
+    return null;
+  }
   const containerRef = useRef(null);
   const [cardsToShow, setCardsToShow] = useState(4);
 
@@ -149,9 +97,9 @@ const ExploreSection = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
               <div className="absolute inset-0 bg-red-600/10 opacity-0 hover:opacity-100 transition-opacity duration-700" />
 
-              {/* Vertical Text (Visible when not expanded) */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-100 transition-opacity duration-300">
-                <p className="text-white/30 text-[10px] uppercase tracking-[0.5em] font-bold origin-center -rotate-90 whitespace-nowrap mb-24">
+              {/* Bottom Corner Text (Visible when not expanded) */}
+              <div className="absolute inset-0 flex flex-col items-start justify-end p-6 pointer-events-none opacity-100 transition-opacity duration-300">
+                <p className="text-red-500 text-[10px] uppercase tracking-[0.5em] font-bold whitespace-nowrap">
                   {item.location.split(",")[0]}
                 </p>
               </div>
@@ -176,8 +124,8 @@ const ExploreSection = () => {
                       </span>
                     </div>
 
-                    <p className="text-white/30 text-[10px] uppercase tracking-[0.3em] font-medium">
-                      Lens №00{item.id}
+                    <p className="text-red-500 text-[10px] uppercase tracking-[0.3em] font-black">
+                      {item.location.split(",")[0]}
                     </p>
                   </div>
                 </div>

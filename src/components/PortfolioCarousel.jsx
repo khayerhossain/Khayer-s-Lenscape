@@ -3,18 +3,23 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import portfolioData from "../data/portfolio.json";
 import Container from "./ui/Container";
 
-const PortfolioCarousel = () => {
+const PortfolioCarousel = ({ initialPortfolio = [] }) => {
+  const portfolioData = initialPortfolio;
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    if (portfolioData.length === 0) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % portfolioData.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [portfolioData.length]);
+
+  if (portfolioData.length === 0) {
+    return null;
+  }
 
   const currentItem = portfolioData[currentIndex];
 

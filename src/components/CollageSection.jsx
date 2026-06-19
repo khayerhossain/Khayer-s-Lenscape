@@ -6,24 +6,22 @@ import Image from "next/image";
 import GlassCard from "./ui/GlassCard";
 import Container from "./ui/Container";
 
-import moments from "../data/moments.json";
-
-const allImages = moments.map((item) => ({
-  id: item.id,
-  src: item.img,
-  title: item.title,
-  span: item.span || "md:col-span-1 md:row-span-1",
-}));
-
-const CollageSection = () => {
+const CollageSection = ({ initialMoments = [] }) => {
   const [visibleCount, setVisibleCount] = useState(12);
   const [selectedImage, setSelectedImage] = useState(null);
   const [activeCategory, setActiveCategory] = useState("All");
 
   const categories = ["All", "Outdoor", "Nature", "River", "Sky", "Urban"];
 
+  const allImages = initialMoments.map((item) => ({
+    id: item.id,
+    src: item.img,
+    title: item.title,
+    span: item.span || "md:col-span-1 md:row-span-1",
+  }));
+
   const filteredImages = allImages.filter((img) => {
-    const moment = moments.find((m) => m.id === img.id);
+    const moment = initialMoments.find((m) => m.id === img.id);
     if (activeCategory === "All") return true;
     return moment?.category === activeCategory;
   });

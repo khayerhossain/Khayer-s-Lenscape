@@ -6,39 +6,13 @@ import { Play } from "lucide-react";
 import Image from "next/image";
 import Container from "./ui/Container";
 
-const videos = [
-  {
-    id: 1,
-    title: "The Silent Flow",
-    description:
-      "A rhythmic journey through the winding river lifelines of Bangladesh.",
-    thumbnail:
-      "https://i.ibb.co.com/RTwFJg5H/Screenshot-2026-02-08-at-8-10-13-PM.png",
-    videoId: "1527322588352043",
-    type: "facebook",
-  },
-  {
-    id: 2,
-    title: "Green Serenity",
-    description:
-      "Exploring the lush tea gardens and mist-covered hills of Sreemangal.",
-    thumbnail: "https://img.youtube.com/vi/XfTWMyT-DfQ/maxresdefault.jpg",
-    videoId: "XfTWMyT-DfQ",
-    type: "youtube",
-  },
-  {
-    id: 3,
-    title: "Ratargul Echoes",
-    description:
-      "Navigating the mystic, submerged forests of the freshwater swamp.",
-    thumbnail: "https://img.youtube.com/vi/O6m-PI8_zqw/maxresdefault.jpg",
-    videoId: "O6m-PI8_zqw",
-    type: "youtube",
-  },
-];
-
-const VideoSection = () => {
+const VideoSection = ({ initialVideos = [] }) => {
+  const videos = initialVideos;
   const [activeVideo, setActiveVideo] = useState(null);
+
+  if (videos.length === 0) {
+    return null;
+  }
 
   return (
     <section className="py-24">

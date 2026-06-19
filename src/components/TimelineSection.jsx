@@ -5,10 +5,8 @@ import GlassCard from "./ui/GlassCard";
 import Image from "next/image";
 import Container from "./ui/Container";
 
-import moments from "../data/moments.json";
-
-const TimelineSection = () => {
-  const displayMoments = moments.slice(0, 4);
+const TimelineSection = ({ initialMoments = [] }) => {
+  const displayMoments = initialMoments.slice(0, 4);
 
   return (
     <section className="py-32 relative overflow-hidden bg-black">
