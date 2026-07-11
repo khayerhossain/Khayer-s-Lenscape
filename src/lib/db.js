@@ -1,32 +1,44 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI;
+// ─── 1. Connection Function (Serverless / Vercel safe) ─────────────────────
+// Uses a global cache to reuse connections across hot reloads in dev
+// and across invocations in serverless environments
 
-if (!MONGODB_URI) {
-  throw new Error("Please define the MONGODB_URI environment variable inside .env");
-}
-
-// Global cache to prevent multiple connections in Next.js hot reload
 let cached = global.mongoose;
 if (!cached) {
   cached = global.mongoose = { conn: null, promise: null };
 }
 
-// ─── 1. Connection Function ────────────────────────────────────────────────
 export async function dbConnect() {
+  const MONGODB_URI = process.env.MONGODB_URI;
+
+  if (!MONGODB_URI) {
+    throw new Error(
+      "❌ MONGODB_URI is not defined. Add it to your .env file locally or in Vercel Environment Variables."
+    );
+  }
+
+  // Return cached connection if available
   if (cached.conn) {
     return cached.conn;
   }
 
   if (!cached.promise) {
     cached.promise = mongoose
-      .connect(MONGODB_URI, { bufferCommands: false })
+      .connect(MONGODB_URI, {
+        bufferCommands: false,
+        // Serverless-friendly timeouts
+        serverSelectionTimeoutMS: 10000,
+        socketTimeoutMS: 45000,
+        connectTimeoutMS: 10000,
+        maxPoolSize: 10,
+      })
       .then((mongooseInstance) => {
         console.log("✅ Connected to MongoDB successfully!");
         return mongooseInstance;
       })
       .catch((err) => {
-        cached.promise = null;
+        cached.promise = null; // reset so next call retries
         console.error("❌ MongoDB connection failed:", err.message);
         throw err;
       });
@@ -82,11 +94,9 @@ const VideoSchema = new mongoose.Schema(
   { collection: "Videos", timestamps: true }
 );
 
-// ─── 3. Safe Model Exports (Next.js hot-reload safe) ───────────────────────
-// Always delete cached model before re-registering to avoid "Cannot overwrite model" errors
+// ─── 3. Safe Model Exports (Next.js hot-reload + serverless safe) ───────────
 
 function getModel(name, schema) {
-  // If model already registered in this process, return it
   if (mongoose.models[name]) {
     return mongoose.models[name];
   }
@@ -176,8 +186,7 @@ export async function seedDatabase() {
   try {
     const portfolioCount = await PortfolioItem.countDocuments();
     if (portfolioCount === 0) {
-      console.log("🌱 Seeding portfolio items...");
-      await PortfolioItem.insertMany(portfolioSeed || []);
+      console.log("🌱 Portfolios collection is empty — add items via the Admin panel.");
     }
 
     const exploreCount = await ExploreItem.countDocuments();
@@ -192,6 +201,7 @@ export async function seedDatabase() {
       await VideoItem.insertMany(videosSeed);
     }
   } catch (error) {
-    console.error("❌ Error seeding database:", error);
+    console.error("❌ Error seeding database:", error.message);
+    // Don't re-throw — seeding failure should not crash the page
   }
 }
